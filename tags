@@ -1,0 +1,611 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+*.c	.vscode/settings.json	/^        "*.c": "c",$/;"	s	object:files.associations
+*.c++	.vscode/settings.json	/^        "*.c++": "c++",$/;"	s	object:files.associations
+*.h	.vscode/settings.json	/^        "*.h": "c",$/;"	s	object:files.associations
+*.hpp	.vscode/settings.json	/^        "*.hpp": "c++",$/;"	s	object:files.associations
+./src/u_algorithm/u_sort.o	Makefile	/^.\/src\/u_algorithm\/u_sort.o:$/;"	t
+./src/u_application/s5_timers.o	Makefile	/^.\/src\/u_application\/s5_timers.o:$/;"	t
+./src/u_application/u_csv.o	Makefile	/^.\/src\/u_application\/u_csv.o:$/;"	t
+./src/u_application/u_fsm.o	Makefile	/^.\/src\/u_application\/u_fsm.o:$/;"	t
+./src/u_application/u_hex.o	Makefile	/^.\/src\/u_application\/u_hex.o:$/;"	t
+./src/u_math/table.o	Makefile	/^.\/src\/u_math\/table.o:$/;"	t
+./src/u_math/u_fixed.o	Makefile	/^.\/src\/u_math\/u_fixed.o:$/;"	t
+./src/u_math/u_math.o	Makefile	/^.\/src\/u_math\/u_math.o:$/;"	t
+./src/u_sellect/u_sellect.o	Makefile	/^.\/src\/u_sellect\/u_sellect.o:$/;"	t
+./src/u_stdlib/u_mallocat.o	Makefile	/^.\/src\/u_stdlib\/u_mallocat.o:$/;"	t
+./src/u_stdlib/u_string.o	Makefile	/^.\/src\/u_stdlib\/u_string.o:$/;"	t
+./src/u_types/u_cstring.o	Makefile	/^.\/src\/u_types\/u_cstring.o:$/;"	t
+./src/u_types/u_hash.o	Makefile	/^.\/src\/u_types\/u_hash.o:$/;"	t
+./src/u_types/u_vector.o	Makefile	/^.\/src\/u_types\/u_vector.o:$/;"	t
+0	.vscode/c_cpp_properties.json	/^                "${workspaceFolder}\/**"$/;"	s	array:configurations.0.includePath
+0	.vscode/c_cpp_properties.json	/^        {$/;"	o	array:configurations
+0	.vscode/launch.json	/^                {$/;"	o	array:configurations.0.setupCommands
+0	.vscode/launch.json	/^        {$/;"	o	array:configurations
+0	.vscode/tasks.json	/^                "$gcc"$/;"	s	array:tasks.0.problemMatcher
+0	.vscode/tasks.json	/^                "$gcc"$/;"	s	array:tasks.1.problemMatcher
+0	.vscode/tasks.json	/^                "-g",$/;"	s	array:tasks.0.args
+0	.vscode/tasks.json	/^                "-g",$/;"	s	array:tasks.1.args
+0	.vscode/tasks.json	/^        {$/;"	o	array:tasks
+1	.vscode/c_cpp_properties.json	/^                "${workspaceFolder}\/inc"$/;"	s	array:configurations.0.includePath
+1	.vscode/tasks.json	/^                "${file}",$/;"	s	array:tasks.0.args
+1	.vscode/tasks.json	/^                "${file}",$/;"	s	array:tasks.1.args
+1	.vscode/tasks.json	/^        {$/;"	o	array:tasks
+2	.vscode/tasks.json	/^                "-o",$/;"	s	array:tasks.0.args
+2	.vscode/tasks.json	/^                "-o",$/;"	s	array:tasks.1.args
+3	.vscode/tasks.json	/^                "${fileDirname}\/${fileBasenameNoExtension}"$/;"	s	array:tasks.0.args
+3	.vscode/tasks.json	/^                "${fileDirname}\/${fileBasenameNoExtension}"$/;"	s	array:tasks.1.args
+AES256	crypto/aes.h	/^#define AES256 /;"	d
+AES_BLOCKLEN	crypto/aes.h	/^#define AES_BLOCKLEN /;"	d
+AES_CBC_decrypt_buffer	crypto/aes.c	/^void AES_CBC_decrypt_buffer(struct AES_ctx* ctx, uint8_t* buf,  uint32_t length)$/;"	f	typeref:typename:void
+AES_CBC_encrypt_buffer	crypto/aes.c	/^void AES_CBC_encrypt_buffer(struct AES_ctx *ctx, uint8_t* buf, uint32_t length)$/;"	f	typeref:typename:void
+AES_CTR_xcrypt_buffer	crypto/aes.c	/^void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)$/;"	f	typeref:typename:void
+AES_ECB_decrypt	crypto/aes.c	/^void AES_ECB_decrypt(const struct AES_ctx* ctx, uint8_t* buf)$/;"	f	typeref:typename:void
+AES_ECB_encrypt	crypto/aes.c	/^void AES_ECB_encrypt(const struct AES_ctx* ctx, uint8_t* buf)$/;"	f	typeref:typename:void
+AES_H	crypto/aes.h	/^#define AES_H$/;"	d
+AES_KEYLEN	crypto/aes.h	/^    #define AES_KEYLEN /;"	d
+AES_ctx	crypto/aes.h	/^struct AES_ctx$/;"	s
+AES_ctx_set_iv	crypto/aes.c	/^void AES_ctx_set_iv(struct AES_ctx* ctx, const uint8_t* iv)$/;"	f	typeref:typename:void
+AES_init_ctx	crypto/aes.c	/^void AES_init_ctx(struct AES_ctx* ctx, const uint8_t* key)$/;"	f	typeref:typename:void
+AES_init_ctx_iv	crypto/aes.c	/^void AES_init_ctx_iv(struct AES_ctx* ctx, const uint8_t* key, const uint8_t* iv)$/;"	f	typeref:typename:void
+AES_keyExpSize	crypto/aes.h	/^    #define AES_keyExpSize /;"	d
+AddRoundKey	crypto/aes.c	/^static void AddRoundKey(uint8_t round, state_t* state, const uint8_t* RoundKey)$/;"	f	typeref:typename:void	file:
+Array	inc/u_types/u_chain.h	/^struct Array{$/;"	s
+BYTE	crypto/sha256.h	/^typedef unsigned char BYTE;             \/\/ 8-bit byte$/;"	t	typeref:typename:unsigned char
+CBC	crypto/aes.h	/^  #define CBC /;"	d
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS= -I.\/inc -g -O2 $/;"	m
+CH	crypto/sha256.c	/^#define CH(/;"	d	file:
+CRC16_H	crypto/crc16.h	/^#define CRC16_H$/;"	d
+CTR	crypto/aes.h	/^  #define CTR /;"	d
+Cipher	crypto/aes.c	/^static void Cipher(state_t* state, const uint8_t* RoundKey)$/;"	f	typeref:typename:void	file:
+Crc16Table	crypto/crc16.c	/^static const unsigned short Crc16Table[256] = {$/;"	v	typeref:typename:const unsigned short[256]	file:
+E	inc/u_types/u_graph.h	/^    u_vector E;$/;"	m	struct:__anonb7622ac20308	typeref:typename:u_vector
+ECB	crypto/aes.h	/^  #define ECB /;"	d
+EP0	crypto/sha256.c	/^#define EP0(/;"	d	file:
+EP1	crypto/sha256.c	/^#define EP1(/;"	d	file:
+E_AT	src/u_types/u_graph.c	/^#define E_AT(/;"	d	file:
+GO_NEXT	src/u_types/u_chain.c	/^#define GO_NEXT(/;"	d	file:
+GO_PREW	src/u_types/u_chain.c	/^#define GO_PREW(/;"	d	file:
+Gnome_sort	src/u_algorithm/u_sort.c	/^void Gnome_sort( int *mas,int n)$/;"	f	typeref:typename:void
+HASH_S	src/u_types/u_hash.c	/^#define HASH_S /;"	d	file:
+HEXDUMP_COLS	crypto/test.c	/^#define HEXDUMP_COLS /;"	d	file:
+HEXDUMP_COLS	src/u_application/u_hex.c	/^#define HEXDUMP_COLS /;"	d	file:
+HEXDUMP_COLS	src/u_types/u_ring.c	/^#define HEXDUMP_COLS /;"	d	file:
+IS_EQUAL	src/u_types/u_vector.c	/^#define IS_EQUAL /;"	d	file:
+InvCipher	crypto/aes.c	/^static void InvCipher(state_t* state, const uint8_t* RoundKey)$/;"	f	typeref:typename:void	file:
+InvMixColumns	crypto/aes.c	/^static void InvMixColumns(state_t* state)$/;"	f	typeref:typename:void	file:
+InvShiftRows	crypto/aes.c	/^static void InvShiftRows(state_t* state)$/;"	f	typeref:typename:void	file:
+InvSubBytes	crypto/aes.c	/^static void InvSubBytes(state_t* state)$/;"	f	typeref:typename:void	file:
+Iv	crypto/aes.h	/^  uint8_t Iv[AES_BLOCKLEN];$/;"	m	struct:AES_ctx	typeref:typename:uint8_t[]
+KUZNECHIK_H	crypto/kuznechik.h	/^#define KUZNECHIK_H$/;"	d
+Kd	inc/u_application/u_pid.h	/^    float Kd; \/\/-- дифференциальная составляющая$/;"	m	struct:__anon35629c2c0108	typeref:typename:float
+KeyExpansion	crypto/aes.c	/^static void KeyExpansion(uint8_t* RoundKey, const uint8_t* Key)$/;"	f	typeref:typename:void	file:
+Ki	inc/u_application/u_pid.h	/^    float Ki; \/\/-- интегральная составляющая$/;"	m	struct:__anon35629c2c0108	typeref:typename:float
+Kp	inc/u_application/u_pid.h	/^    float Kp; \/\/-- пропорциональная составляющая$/;"	m	struct:__anon35629c2c0108	typeref:typename:float
+MAJ	crypto/sha256.c	/^#define MAJ(/;"	d	file:
+MAX_LEN_MSG	src/u_types/u_ring.c	/^#define MAX_LEN_MSG /;"	d	file:
+MAX_SIGN	src/u_math/u_math.c	/^#define MAX_SIGN /;"	d	file:
+MIMode	.vscode/launch.json	/^            "MIMode": "gdb",$/;"	s	object:configurations.0
+MULTIPLY_AS_A_FUNCTION	crypto/aes.c	/^  #define MULTIPLY_AS_A_FUNCTION /;"	d	file:
+MixColumns	crypto/aes.c	/^static void MixColumns(state_t* state)$/;"	f	typeref:typename:void	file:
+Multiply	crypto/aes.c	/^#define Multiply(/;"	d	file:
+Multiply	crypto/aes.c	/^static uint8_t Multiply(uint8_t x, uint8_t y)$/;"	f	typeref:typename:uint8_t	file:
+NO_EQUAL	src/u_types/u_vector.c	/^#define NO_EQUAL /;"	d	file:
+Nb	crypto/aes.c	/^#define Nb /;"	d	file:
+Nk	crypto/aes.c	/^    #define Nk /;"	d	file:
+Nr	crypto/aes.c	/^    #define Nr /;"	d	file:
+OBJ	Makefile	/^OBJ=\\$/;"	m
+PJWHash	crypto/crc16.c	/^unsigned int PJWHash (void *data, size_t n, size_t table_size)$/;"	f	typeref:typename:unsigned int
+QMAX	src/u_types/queue_static.c	/^#define QMAX /;"	d	file:
+ROTLEFT	crypto/sha256.c	/^#define ROTLEFT(/;"	d	file:
+ROTRIGHT	crypto/sha256.c	/^#define ROTRIGHT(/;"	d	file:
+Rcon	crypto/aes.c	/^static const uint8_t Rcon[11] = {$/;"	v	typeref:typename:const uint8_t[11]	file:
+RoundKey	crypto/aes.h	/^  uint8_t RoundKey[AES_keyExpSize];$/;"	m	struct:AES_ctx	typeref:typename:uint8_t[]
+SHA256_BLOCK_SIZE	crypto/sha256.h	/^#define SHA256_BLOCK_SIZE /;"	d
+SHA256_CTX	crypto/sha256.h	/^} SHA256_CTX;$/;"	t	typeref:struct:__anoned58ede40108
+SHA256_H	crypto/sha256.h	/^#define SHA256_H$/;"	d
+SIG0	crypto/sha256.c	/^#define SIG0(/;"	d	file:
+SIG1	crypto/sha256.c	/^#define SIG1(/;"	d	file:
+STDLIB_API	inc/u_stdlib/u_stdlib.h	/^#define STDLIB_API /;"	d
+ShiftRows	crypto/aes.c	/^static void ShiftRows(state_t* state)$/;"	f	typeref:typename:void	file:
+SubBytes	crypto/aes.c	/^static void SubBytes(state_t* state)$/;"	f	typeref:typename:void	file:
+T	src/u_types/u_hash.c	/^static unsigned char T[256];$/;"	v	typeref:typename:unsigned char[256]	file:
+U_CHAIN_H	inc/u_types/u_chain.h	/^#define U_CHAIN_H$/;"	d
+U_GRAPH_H	inc/u_types/u_graph.h	/^#define U_GRAPH_H$/;"	d
+U_MALLOC_H	inc/u_stdlib/u_mallocat.h	/^#define U_MALLOC_H$/;"	d
+U_STDDEF_H	inc/u_stdlib/u_stddef.h	/^#define U_STDDEF_H$/;"	d
+U_STDLIB_H	inc/u_stdlib/u_stdlib.h	/^#define U_STDLIB_H$/;"	d
+U_STRING_H	inc/u_stdlib/u_string.h	/^#define U_STRING_H$/;"	d
+U_VECTOR_H	inc/u_types/u_vector.h	/^#define U_VECTOR_H$/;"	d
+V	inc/u_types/u_graph.h	/^    u_vector V;$/;"	m	struct:__anonb7622ac20308	typeref:typename:u_vector
+V1	inc/u_types/u_graph.h	/^    size_t V1;    \/\/ узел1 (источник)$/;"	m	struct:__anonb7622ac20208	typeref:typename:size_t
+V2	inc/u_types/u_graph.h	/^    size_t V2;    \/\/ узел2 (получатель)$/;"	m	struct:__anonb7622ac20208	typeref:typename:size_t
+V_AT	src/u_types/u_graph.c	/^#define V_AT(/;"	d	file:
+WORD	crypto/sha256.h	/^typedef unsigned int  WORD;             \/\/ 32-bit word, change to "long" for 16-bit machines$/;"	t	typeref:typename:unsigned int
+XorWithIv	crypto/aes.c	/^static void XorWithIv(uint8_t* buf, const uint8_t* Iv)$/;"	f	typeref:typename:void	file:
+__CSV_H__	inc/u_application/u_csv.h	/^#define __CSV_H__$/;"	d
+__FSM_H__	inc/u_application/u_fsm.h	/^#define __FSM_H__$/;"	d
+__HEX_H__	inc/u_application/u_hex.h	/^#define __HEX_H__$/;"	d
+__S5_TIMERS_H__	inc/u_application/s5_timers.h	/^#define __S5_TIMERS_H__$/;"	d
+__U_CAT_H__	inc/u_cat.h	/^#define __U_CAT_H__$/;"	d
+__U_CSTRING_H__	inc/u_types/u_cstring.h	/^#define __U_CSTRING_H__$/;"	d
+__U_HASH_H__	inc/u_types/u_hash.h	/^#define __U_HASH_H__$/;"	d
+__U_MATH_H__	inc/u_math/u_math.h	/^#define __U_MATH_H__$/;"	d
+__U_PID_H__	inc/u_application/u_pid.h	/^#define __U_PID_H__$/;"	d
+__U_SELLECT_H__	inc/u_sellect/u_sellect.h	/^#define __U_SELLECT_H__$/;"	d
+__U_SORT_H__	inc/u_algorithm/u_sort.h	/^#define __U_SORT_H__$/;"	d
+__U_TREE_H__	inc/u_types/u_tree.h	/^#define __U_TREE_H__$/;"	d
+__anon347d25fb0108	inc/u_application/u_csv.h	/^{$/;"	s
+__anon34b349350108	inc/u_application/u_fsm.h	/^{$/;"	s
+__anon35629c2c0108	inc/u_application/u_pid.h	/^{$/;"	s
+__anon3602e577010a	crypto/kuznechik.h	/^typedef union {	$/;"	u
+__anon3602e5770208	crypto/kuznechik.h	/^typedef struct {$/;"	s
+__anon4ae4609e010a	src/u_math/u_fixed.c	/^{$/;"	u	file:
+__anon4ae4609e0208	src/u_math/u_fixed.c	/^    struct{$/;"	s	union:__anon4ae4609e010a	file:
+__anon863785a90108	src/u_types/u_ring.c	/^{$/;"	s	file:
+__anon97c58a830108	inc/u_types/u_vector.h	/^{$/;"	s
+__anonb16484b40108	inc/u_types/u_hash.h	/^{$/;"	s
+__anonb16484b40208	inc/u_types/u_hash.h	/^{$/;"	s
+__anonb7622ac20108	inc/u_types/u_graph.h	/^{$/;"	s
+__anonb7622ac20208	inc/u_types/u_graph.h	/^{$/;"	s
+__anonb7622ac20308	inc/u_types/u_graph.h	/^{$/;"	s
+__anonc87802d30108	inc/u_sellect/u_sellect.h	/^typedef struct{$/;"	s
+__anonc87802d30208	inc/u_sellect/u_sellect.h	/^  {$/;"	s
+__anonea6a95760108	inc/u_application/s5_timers.h	/^{$/;"	s
+__anoned58ede40108	crypto/sha256.h	/^typedef struct {$/;"	s
+__fd_mask	inc/u_sellect/u_sellect.h	/^}__fd_mask;$/;"	t	typeref:struct:__anonc87802d30108
+__fds_bits	inc/u_sellect/u_sellect.h	/^    __fd_mask __fds_bits[32];$/;"	m	struct:__anonc87802d30208	typeref:typename:__fd_mask[32]
+_attach2_chains	src/u_types/u_chain.c	/^    static void _attach2_chains(struct chain* first, struct chain* sec)$/;"	f	typeref:typename:void	file:
+_byte	src/u_types/queue_static.c	/^  _byte=1,$/;"	e	enum:bytes	file:
+_hword	src/u_types/queue_static.c	/^  _hword=2,$/;"	e	enum:bytes	file:
+_line_to_vec	src/u_application/u_csv.c	/^static void _line_to_vec(csv_grid* csv, char* line,size_t l)$/;"	f	typeref:typename:void	file:
+_nodes	inc/u_types/u_graph.h	/^    int _nodes;                \/\/число связей$/;"	m	struct:__anonb7622ac20108	typeref:typename:int
+_quickSort	src/u_algorithm/u_sort.c	/^static void _quickSort(int *numbers, int left, int right)$/;"	f	typeref:typename:void	file:
+_step	src/u_math/u_fixed.c	/^u_fixed16 _step(u_fixed16 A, int X){$/;"	f	typeref:typename:u_fixed16
+_test1_	src/u_types/u_chain.c	/^void _test1_()$/;"	f	typeref:typename:void
+_void_string	src/u_application/u_csv.c	/^static char  _void_string[]="__NULL__";$/;"	v	typeref:typename:char[]	file:
+_word	src/u_types/queue_static.c	/^  _word=4,$/;"	e	enum:bytes	file:
+add_ticks	src/u_application/s5_timers.c	/^static inline void add_ticks(clock_t a){$/;"	f	typeref:typename:void	file:
+add_ticks	src/u_application/s5_timers.c	/^static inline void add_ticks(uint32_t a){$/;"	f	typeref:typename:void	file:
+addnode	src/u_types/tree_sort.c	/^tnode* addnode(int x, tnode *tree) {$/;"	f	typeref:typename:tnode *
+addnode	src/u_types/u_hash.c	/^hash_table* addnode( hash_table *table, int id, void* data)$/;"	f	typeref:typename:hash_table *
+addnode	src/u_types/u_tree.c	/^tnode* addnode( tnode *tree, int id, void* data)$/;"	f	typeref:typename:tnode *
+addnode_v2	src/u_types/u_hash.c	/^hash_table_v2* addnode_v2( hash_table_v2 *table, char* key, void* data)$/;"	f	typeref:typename:hash_table_v2 *
+addr	inc/u_sellect/u_sellect.h	/^    unsigned int* addr;$/;"	m	struct:__anonc87802d30108	typeref:typename:unsigned int *
+args	.vscode/launch.json	/^            "args": [],$/;"	a	object:configurations.0
+args	.vscode/tasks.json	/^            "args": [$/;"	a	object:tasks.0
+args	.vscode/tasks.json	/^            "args": [$/;"	a	object:tasks.1
+array	inc/u_types/u_chain.h	/^  struct Array array;$/;"	m	struct:chain	typeref:struct:Array
+b	crypto/kuznechik.h	/^    uint8_t  b[16];$/;"	m	union:__anon3602e577010a	typeref:typename:uint8_t[16]
+bar	main.c	/^bar(fsm* f,void* data)$/;"	f	typeref:typename:void
+baz	main.c	/^baz(fsm* f,void* data)$/;"	f	typeref:typename:void
+bitlen	crypto/sha256.h	/^	unsigned long long bitlen;$/;"	m	struct:__anoned58ede40108	typeref:typename:unsigned long long
+bubble_sort	src/u_algorithm/u_sort.c	/^void bubble_sort(int* src, int n)$/;"	f	typeref:typename:void
+buffer	src/u_types/u_ring.c	/^    s8 buffer[MAX_LEN_MSG];$/;"	m	struct:__anon863785a90108	typeref:typename:s8[]	file:
+busy_flag	src/u_types/queue_static.c	/^  u8 busy_flag; \/\/происходит ли чтение-запись в данный моме/;"	m	struct:queue	typeref:typename:u8	file:
+bytes	src/u_types/queue_static.c	/^enum bytes{$/;"	g	file:
+cStandard	.vscode/c_cpp_properties.json	/^            "cStandard": "c11",$/;"	s	object:configurations.0
+c_new	inc/u_types/u_hash.h	/^#define c_new(/;"	d
+c_new	inc/u_types/u_tree.h	/^#define c_new(/;"	d
+c_new	src/u_types/queue.c	/^#define c_new(/;"	d	file:
+c_new	src/u_types/tree_sort.c	/^#define c_new(/;"	d	file:
+c_new	src/u_types/u_chain.c	/^#define c_new(/;"	d	file:
+c_new_n	src/u_types/queue.c	/^#define c_new_n(/;"	d	file:
+cable_name	inc/u_types/u_graph.h	/^    char cable_name[25];       \/\/ имя$/;"	m	struct:__anonb7622ac20208	typeref:typename:char[25]
+chain	inc/u_types/u_chain.h	/^struct chain$/;"	s
+change_state	src/u_application/u_fsm.c	/^change_state(fsm* f, fsm_func func, void* data)$/;"	f	typeref:typename:void
+choise_sort	src/u_algorithm/u_sort.c	/^void choise_sort(int* src, int n)$/;"	f	typeref:typename:void
+chrono	.vscode/settings.json	/^        "chrono": "c",$/;"	s	object:files.associations
+clean	Makefile	/^clean:$/;"	t
+cols	inc/u_application/u_csv.h	/^    size_t cols;$/;"	m	struct:__anon347d25fb0108	typeref:typename:size_t
+command	.vscode/tasks.json	/^            "command": "\/usr\/bin\/clang-7",$/;"	s	object:tasks.1
+command	.vscode/tasks.json	/^            "command": "\/usr\/bin\/gcc",$/;"	s	object:tasks.0
+compilerPath	.vscode/c_cpp_properties.json	/^            "compilerPath": "\/usr\/bin\/clang",$/;"	s	object:configurations.0
+condition_variable	.vscode/settings.json	/^        "condition_variable": "c",$/;"	s	object:files.associations
+configurations	.vscode/c_cpp_properties.json	/^    "configurations": [$/;"	a
+configurations	.vscode/launch.json	/^    "configurations": [$/;"	a
+count	src/u_types/queue.c	/^  size_t count; \/\/текущее число элементов$/;"	m	struct:queue	typeref:typename:size_t	file:
+count	src/u_types/queue_static.c	/^  size_t count; \/\/текущее число элементов$/;"	m	struct:queue	typeref:typename:size_t	file:
+cppStandard	.vscode/c_cpp_properties.json	/^            "cppStandard": "c++14",$/;"	s	object:configurations.0
+crc16	crypto/crc16.c	/^unsigned short crc16(unsigned char* pcBlock, unsigned short len)$/;"	f	typeref:typename:unsigned short
+crc32	crypto/crc16.c	/^unsigned long crc32(unsigned long crc32, unsigned char * buf, ssize_t cnt)$/;"	f	typeref:typename:unsigned long
+crc32table	crypto/crc16.c	/^unsigned long crc32table[256];$/;"	v	typeref:typename:unsigned long[256]
+crc_init	crypto/crc16.c	/^void crc_init()$/;"	f	typeref:typename:void
+csv_get_ceil	src/u_application/u_csv.c	/^char* csv_get_ceil(csv_grid* csv,size_t line, size_t column, char* buff, size_t n)$/;"	f	typeref:typename:char *
+csv_grid	inc/u_application/u_csv.h	/^}csv_grid;$/;"	t	typeref:struct:__anon347d25fb0108
+csv_print	src/u_application/u_csv.c	/^void csv_print(csv_grid* csv)$/;"	f	typeref:typename:void
+csv_print_ceil	src/u_application/u_csv.c	/^void csv_print_ceil(csv_grid* csv,size_t line, size_t column)$/;"	f	typeref:typename:void
+ctime	.vscode/settings.json	/^        "ctime": "c",$/;"	s	object:files.associations
+cwd	.vscode/launch.json	/^            "cwd": "${fileDirname}",$/;"	s	object:configurations.0
+cwd	.vscode/tasks.json	/^                "cwd": "\/usr\/bin"$/;"	s	object:tasks.0.options
+cwd	.vscode/tasks.json	/^                "cwd": "\/usr\/bin"$/;"	s	object:tasks.1.options
+data	crypto/sha256.h	/^	BYTE data[64];$/;"	m	struct:__anoned58ede40108	typeref:typename:BYTE[64]
+data	inc/u_types/u_chain.h	/^    void* data;$/;"	m	struct:Array	typeref:typename:void *
+data	inc/u_types/u_graph.h	/^    void* data;                \/\/указатель на данные$/;"	m	struct:__anonb7622ac20108	typeref:typename:void *
+data	inc/u_types/u_hash.h	/^  void* data;             \/\/данные$/;"	m	struct:h_node_tag	typeref:typename:void *
+data	inc/u_types/u_hash.h	/^  void* data;             \/\/данные$/;"	m	struct:hnode_tag	typeref:typename:void *
+data	inc/u_types/u_tree.h	/^  void* data;             \/\/данные$/;"	m	struct:tnode_tag	typeref:typename:void *
+data	src/u_types/tree_sort.c	/^  void* data;             \/\/данные$/;"	m	struct:tnode_tag	typeref:typename:void *	file:
+data_size	src/u_types/queue_static.c	/^  enum bytes data_size; \/\/размер элемента данных$/;"	m	struct:queue	typeref:enum:bytes	file:
+datalen	crypto/sha256.h	/^	WORD datalen;$/;"	m	struct:__anoned58ede40108	typeref:typename:WORD
+decryptFile	crypto/test.c	/^void decryptFile(const char* file,const char* pass){$/;"	f	typeref:typename:void
+defines	.vscode/c_cpp_properties.json	/^            "defines": [],$/;"	a	object:configurations.0
+description	.vscode/launch.json	/^                    "description": "Включить автоматическое формати/;"	s	object:configurations.0.setupCommands.0
+detail	.vscode/tasks.json	/^            "detail": "Generated task by Debugger"$/;"	s	object:tasks.0
+detail	.vscode/tasks.json	/^            "detail": "Generated task by Debugger"$/;"	s	object:tasks.1
+dir	inc/u_types/u_graph.h	/^    u8 dir;                \/\/ направленность$/;"	m	struct:__anonb7622ac20208	typeref:typename:u8
+encryptFile	crypto/test.c	/^void encryptFile(const char* file,const char* pass){$/;"	f	typeref:typename:void
+end_pos_at_end	src/u_types/u_ring.c	/^    s16 end_pos_at_end;$/;"	m	struct:__anon863785a90108	typeref:typename:s16	file:
+end_state	src/u_application/u_fsm.c	/^end_state(fsm* f)$/;"	f	typeref:typename:void
+environment	.vscode/launch.json	/^            "environment": [],$/;"	a	object:configurations.0
+externalConsole	.vscode/launch.json	/^            "externalConsole": false,$/;"	b	object:configurations.0
+fd_set	inc/u_sellect/u_sellect.h	/^  } fd_set;$/;"	t	typeref:struct:__anonc87802d30208
+files.associations	.vscode/settings.json	/^    "files.associations": {$/;"	o
+find_min	src/u_algorithm/u_sort.c	/^int find_min(int* src, int n)$/;"	f	typeref:typename:int
+fix_add	src/u_math/u_fixed.c	/^u_fixed16 fix_add(u_fixed16 a, u_fixed16 b)$/;"	f	typeref:typename:u_fixed16
+fix_div	src/u_math/u_fixed.c	/^u_fixed16 fix_div(u_fixed16 a, u_fixed16 b)$/;"	f	typeref:typename:u_fixed16
+fix_mull	src/u_math/u_fixed.c	/^u_fixed16 fix_mull(u_fixed16 a, u_fixed16 b)$/;"	f	typeref:typename:u_fixed16
+fix_sub	src/u_math/u_fixed.c	/^u_fixed16 fix_sub(u_fixed16 a, u_fixed16 b)$/;"	f	typeref:typename:u_fixed16
+flags	inc/u_types/u_hash.h	/^  int flags;$/;"	m	struct:h_node_tag	typeref:typename:int
+flags	inc/u_types/u_hash.h	/^  int flags;$/;"	m	struct:hnode_tag	typeref:typename:int
+foo	main.c	/^foo(fsm* f,void* data)$/;"	f	typeref:typename:void
+free_csv	src/u_application/u_csv.c	/^void free_csv(csv_grid* csv)$/;"	f	typeref:typename:void
+free_pid	src/u_application/u_pid.c	/^free_pid(u_pid* Pid)$/;"	f	typeref:typename:void
+free_queue	src/u_types/queue.c	/^void free_queue(struct queue* q)$/;"	f	typeref:typename:void
+freemem	src/u_types/tree_sort.c	/^void freemem(tnode *tree)$/;"	f	typeref:typename:void
+freemem	src/u_types/u_hash.c	/^void freemem(hash_table *tree, void(*data_free_f)(void*))$/;"	f	typeref:typename:void
+freemem	src/u_types/u_tree.c	/^void freemem(tnode *tree, void(*data_free_f)(void*))$/;"	f	typeref:typename:void
+freemem_v2	src/u_types/u_hash.c	/^void freemem_v2(hash_table_v2 *tree, void(*data_free_f)(void*))$/;"	f	typeref:typename:void
+fsm	inc/u_application/u_fsm.h	/^}fsm;$/;"	t	typeref:struct:__anon34b349350108
+fsm_deinit	src/u_application/u_fsm.c	/^void fsm_deinit(fsm* fv)$/;"	f	typeref:typename:void
+fsm_free	src/u_application/u_fsm.c	/^void fsm_free(fsm* fv)$/;"	f	typeref:typename:void
+fsm_func	inc/u_application/u_fsm.h	/^typedef void(*fsm_func)(fsm*,void*);$/;"	t	typeref:typename:void (*)(fsm *,void *)
+fsm_init	src/u_application/u_fsm.c	/^void fsm_init(fsm* fv,fsm_func start_state_func)$/;"	f	typeref:typename:void
+fsm_new	src/u_application/u_fsm.c	/^fsm* fsm_new(fsm_func start_state_func)$/;"	f	typeref:typename:fsm *
+getSBoxInvert	crypto/aes.c	/^#define getSBoxInvert(/;"	d	file:
+getSBoxValue	crypto/aes.c	/^#define getSBoxValue(/;"	d	file:
+get_cstr	src/u_types/u_cstring.c	/^char* get_cstr(u_string* str, char* buff, size_t n)$/;"	f	typeref:typename:char *
+get_cstr_a	src/u_types/u_cstring.c	/^char* get_cstr_a(u_string* str)$/;"	f	typeref:typename:char *
+get_cstr_at	src/u_types/u_cstring.c	/^char* get_cstr_at(u_string* str, size_t at, char* buff, size_t n)$/;"	f	typeref:typename:char *
+get_data_by_key	src/u_types/u_tree.c	/^void* get_data_by_key(tnode* tree,int key)$/;"	f	typeref:typename:void *
+get_data_by_key_v2	src/u_types/u_hash.c	/^void* get_data_by_key_v2(hash_table_v2* tab,char* key)$/;"	f	typeref:typename:void *
+get_elem_by_key	src/u_types/tree_sort.c	/^tnode* get_elem_by_key(tnode* tree,int key)$/;"	f	typeref:typename:tnode *
+get_elem_by_key	src/u_types/u_hash.c	/^hnode* get_elem_by_key(hash_table* table,int key)$/;"	f	typeref:typename:hnode *
+get_elem_by_key	src/u_types/u_tree.c	/^tnode* get_elem_by_key(tnode* tree,int key)$/;"	f	typeref:typename:tnode *
+get_elem_by_key_v2	src/u_types/u_hash.c	/^hnode_v2* get_elem_by_key_v2(hash_table_v2* table,char* key)$/;"	f	typeref:typename:hnode_v2 *
+get_i_substring	src/u_types/u_cstring.c	/^u_string* get_i_substring(u_string* str,size_t i)$/;"	f	typeref:typename:u_string *
+get_ticks	src/u_application/s5_timers.c	/^static inline clock_t get_ticks(void){$/;"	f	typeref:typename:clock_t	file:
+get_ticks	src/u_application/s5_timers.c	/^static inline uint32_t get_ticks(void){$/;"	f	typeref:typename:uint32_t	file:
+group	.vscode/tasks.json	/^            "group": "build",$/;"	s	object:tasks.1
+group	.vscode/tasks.json	/^            "group": {$/;"	o	object:tasks.0
+h_node_tag	inc/u_types/u_hash.h	/^typedef struct h_node_tag$/;"	s
+hash_func	src/u_types/u_hash.c	/^int hash_func(int a,int size){$/;"	f	typeref:typename:int
+hash_table	inc/u_types/u_hash.h	/^} hash_table;$/;"	t	typeref:struct:__anonb16484b40108
+hash_table_v2	inc/u_types/u_hash.h	/^} hash_table_v2;$/;"	t	typeref:struct:__anonb16484b40208
+hashprint	src/u_types/u_hash.c	/^void hashprint(hash_table *tree)$/;"	f	typeref:typename:void
+hashprint_v2	src/u_types/u_hash.c	/^void hashprint_v2(hash_table_v2 *tree)$/;"	f	typeref:typename:void
+head	inc/u_types/u_cstring.h	/^    struct u_string_t* head; \/\/-- голова (but not using)$/;"	m	struct:u_string_t	typeref:struct:u_string_t *
+hexdump	crypto/test.c	/^void hexdump(void *mem, unsigned int len)$/;"	f	typeref:typename:void
+hexdump	src/u_application/u_hex.c	/^void hexdump(void *mem, unsigned int len)$/;"	f	typeref:typename:void
+hexdump	src/u_types/u_ring.c	/^void hexdump(void *mem, unsigned int len)$/;"	f	typeref:typename:void
+hnode	inc/u_types/u_hash.h	/^} hnode;$/;"	t	typeref:struct:hnode_tag
+hnode_tag	inc/u_types/u_hash.h	/^typedef struct hnode_tag$/;"	s
+hnode_v2	inc/u_types/u_hash.h	/^} hnode_v2;$/;"	t	typeref:struct:h_node_tag
+ignoreFailures	.vscode/launch.json	/^                    "ignoreFailures": true$/;"	b	object:configurations.0.setupCommands.0
+includePath	.vscode/c_cpp_properties.json	/^            "includePath": [$/;"	a	object:configurations.0
+init	src/u_types/queue.c	/^struct queue* init(size_t lenght_queue) $/;"	f	typeref:struct:queue *
+init	src/u_types/queue_static.c	/^void init(struct queue* q, enum bytes b) $/;"	f	typeref:typename:void
+init_chain	src/u_types/u_chain.c	/^static struct chain* init_chain(void)$/;"	f	typeref:struct:chain *	file:
+init_pearson_table	src/u_types/u_hash.c	/^static void init_pearson_table(unsigned char* tbl,unsigned int __seed)$/;"	f	typeref:typename:void	file:
+init_pid	src/u_application/u_pid.c	/^init_pid(u_pid* Pid,float Kp,float Ki,float Kd,u_clock_t period)$/;"	f	typeref:typename:void
+insert	src/u_types/queue.c	/^int insert(struct queue *q, void* x) {$/;"	f	typeref:typename:int
+insert	src/u_types/queue_static.c	/^int insert(struct queue *q, int x) {$/;"	f	typeref:typename:int
+insert_sort	src/u_algorithm/u_sort.c	/^void insert_sort(int* src, int n)$/;"	f	typeref:typename:void
+insert_sort_const	src/u_algorithm/u_sort.c	/^void insert_sort_const(int* dest, const int* src, int n)$/;"	f	typeref:typename:void
+integral	inc/u_application/u_pid.h	/^    float integral;                                                                             /;"	m	struct:__anon35629c2c0108	typeref:typename:float
+intelliSenseMode	.vscode/c_cpp_properties.json	/^            "intelliSenseMode": "linux-clang-x64"$/;"	s	object:configurations.0
+isDefault	.vscode/tasks.json	/^                "isDefault": true$/;"	b	object:tasks.0.group
+is_available	src/u_stdlib/u_mallocat.c	/^    u16 is_available:1;$/;"	m	struct:memory_block	typeref:typename:u16:1	file:
+is_inlimits	src/u_application/u_hex.c	/^int is_inlimits(size_t min, size_t max, size_t checkPtr)$/;"	f	typeref:typename:int
+isempty	src/u_types/queue.c	/^int isempty(struct queue *q) $/;"	f	typeref:typename:int
+isempty	src/u_types/queue_static.c	/^int isempty(struct queue *q) $/;"	f	typeref:typename:int
+isfull	src/u_types/queue.c	/^int isfull(struct queue *q) $/;"	f	typeref:typename:int
+isfull	src/u_types/queue_static.c	/^int isfull(struct queue *q) $/;"	f	typeref:typename:int
+isset	inc/u_sellect/u_sellect.h	/^    int isset;$/;"	m	struct:__anonc87802d30108	typeref:typename:int
+k	crypto/kuznechik.h	/^	w128_t k[10];		\/\/ round keys$/;"	m	struct:__anon3602e5770208	typeref:typename:w128_t[10]
+k	crypto/sha256.c	/^static const WORD k[64] = {$/;"	v	typeref:typename:const WORD[64]	file:
+key	inc/u_types/u_hash.h	/^  char* key;           \/\/ уникальный ключ$/;"	m	struct:h_node_tag	typeref:typename:char *
+key	inc/u_types/u_hash.h	/^  int key;           \/\/ уникальный ключ$/;"	m	struct:hnode_tag	typeref:typename:int
+key	inc/u_types/u_tree.h	/^  int key;           \/\/ поле данных$/;"	m	struct:tnode_tag	typeref:typename:int
+key	src/u_types/tree_sort.c	/^  int key;           \/\/ поле данных$/;"	m	struct:tnode_tag	typeref:typename:int	file:
+key2	src/u_types/u_hash.c	/^static char* key2[]= {"org.a","o2", "i love you",  "beam",      "johan",  "bear",   "redgard"};$/;"	v	typeref:typename:char * []	file:
+keys	src/u_types/u_hash.c	/^static int keys[]=  {1024,1,1546512,25465613,1565651,3356302,6521651};$/;"	v	typeref:typename:int[]	file:
+kind	.vscode/tasks.json	/^                "kind": "build",$/;"	s	object:tasks.0.group
+kuz_decrypt_block	crypto/m128.c	/^void kuz_decrypt_block(kuz_key_t *key, void *blk)$/;"	f	typeref:typename:void
+kuz_decrypt_block	crypto/m8.c	/^void kuz_decrypt_block(kuz_key_t *key, void *blk)$/;"	f	typeref:typename:void
+kuz_encrypt_block	crypto/m128.c	/^void kuz_encrypt_block(kuz_key_t *key, void *blk)$/;"	f	typeref:typename:void
+kuz_encrypt_block	crypto/m8.c	/^void kuz_encrypt_block(kuz_key_t *key, void *blk)$/;"	f	typeref:typename:void
+kuz_init	crypto/m128.c	/^void kuz_init()$/;"	f	typeref:typename:void
+kuz_init	crypto/m8.c	/^void kuz_init()$/;"	f	typeref:typename:void
+kuz_initialized	crypto/m128.c	/^static int kuz_initialized = 0;$/;"	v	typeref:typename:int	file:
+kuz_key_t	crypto/kuznechik.h	/^} kuz_key_t;$/;"	t	typeref:struct:__anon3602e5770208
+kuz_l	crypto/m128.c	/^static void kuz_l(w128_t *w)$/;"	f	typeref:typename:void	file:
+kuz_l	crypto/m8.c	/^static void kuz_l(w128_t *w)$/;"	f	typeref:typename:void	file:
+kuz_l_dec128	crypto/m128.c	/^static __m128i kuz_l_dec128[16][256];$/;"	v	typeref:typename:__m128i[16][256]	file:
+kuz_l_inv	crypto/m128.c	/^static void kuz_l_inv(w128_t *w)$/;"	f	typeref:typename:void	file:
+kuz_l_inv	crypto/m8.c	/^static void kuz_l_inv(w128_t *w)$/;"	f	typeref:typename:void	file:
+kuz_lvec	crypto/m128.c	/^static const uint8_t kuz_lvec[16] = {$/;"	v	typeref:typename:const uint8_t[16]	file:
+kuz_lvec	crypto/m8.c	/^static const uint8_t kuz_lvec[16] = {$/;"	v	typeref:typename:const uint8_t[16]	file:
+kuz_mul_gf256	crypto/m128.c	/^static uint8_t kuz_mul_gf256(uint8_t x, uint8_t y)$/;"	f	typeref:typename:uint8_t	file:
+kuz_mul_gf256	crypto/m8.c	/^static uint8_t kuz_mul_gf256(uint8_t x, uint8_t y)$/;"	f	typeref:typename:uint8_t	file:
+kuz_pi	crypto/m128.c	/^static const uint8_t kuz_pi[0x100] = {$/;"	v	typeref:typename:const uint8_t[0x100]	file:
+kuz_pi	crypto/m8.c	/^const uint8_t kuz_pi[0x100] = {$/;"	v	typeref:typename:const uint8_t[0x100]
+kuz_pi_inv	crypto/m128.c	/^static const uint8_t kuz_pi_inv[0x100] = {$/;"	v	typeref:typename:const uint8_t[0x100]	file:
+kuz_pi_inv	crypto/m8.c	/^static const uint8_t kuz_pi_inv[0x100] = {$/;"	v	typeref:typename:const uint8_t[0x100]	file:
+kuz_pil_dec128	crypto/m128.c	/^static __m128i kuz_pil_dec128[16][256];$/;"	v	typeref:typename:__m128i[16][256]	file:
+kuz_pil_enc128	crypto/m128.c	/^static __m128i kuz_pil_enc128[16][256];$/;"	v	typeref:typename:__m128i[16][256]	file:
+kuz_set_decrypt_key	crypto/m128.c	/^void kuz_set_decrypt_key(kuz_key_t *kuz, const uint8_t key[32])$/;"	f	typeref:typename:void
+kuz_set_decrypt_key	crypto/m8.c	/^void kuz_set_decrypt_key(kuz_key_t *kuz, const uint8_t key[32])$/;"	f	typeref:typename:void
+kuz_set_encrypt_key	crypto/m128.c	/^void kuz_set_encrypt_key(kuz_key_t *kuz, const uint8_t key[32])$/;"	f	typeref:typename:void
+kuz_set_encrypt_key	crypto/m8.c	/^void kuz_set_encrypt_key(kuz_key_t *kuz, const uint8_t key[32])$/;"	f	typeref:typename:void
+label	.vscode/tasks.json	/^            "label": "C\/C++: clang-7 build active file",$/;"	s	object:tasks.1
+label	.vscode/tasks.json	/^            "label": "C\/C++: gcc build active file",$/;"	s	object:tasks.0
+left	inc/u_types/u_tree.h	/^  struct tnode_tag *left;  \/\/ левый потомок$/;"	m	struct:tnode_tag	typeref:struct:tnode_tag *
+left	src/u_types/tree_sort.c	/^  struct tnode_tag *left;  \/\/ левый потомок$/;"	m	struct:tnode_tag	typeref:struct:tnode_tag *	file:
+len	inc/u_types/u_cstring.h	/^    size_t len; \/\/-- длинна куска$/;"	m	struct:u_string_t	typeref:typename:size_t
+libu_cat.a	Makefile	/^libu_cat.a: $(OBJ)$/;"	t
+line	inc/u_application/u_csv.h	/^    u_vector line;$/;"	m	struct:__anon347d25fb0108	typeref:typename:u_vector
+m	src/u_math/u_fixed.c	/^        int m:16; \/\/целое$/;"	m	struct:__anon4ae4609e010a::__anon4ae4609e0208	typeref:typename:int:16	file:
+main	Makefile	/^main: main.o libu_cat.a$/;"	t
+main	crypto/test.c	/^int main(int argc, char const *argv[]){$/;"	f	typeref:typename:int
+main	crypto/кузнечик/main.c	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	main.c	/^int main(int argc, char const *argv[])$/;"	f	typeref:typename:int
+main	src/u_math/u_fixed.c	/^__attribute__((weak)) int main(int argc, char const *argv[]) $/;"	f	typeref:typename:int
+main	src/u_types/queue_static.c	/^int main(int argc, char const *argv[])$/;"	f	typeref:typename:int
+main	src/u_types/tree_sort.c	/^int main()$/;"	f	typeref:typename:int
+main	src/u_types/u_chain.c	/^__attribute__((weak)) int main(int argc, char const *argv[]) $/;"	f	typeref:typename:int
+main	src/u_types/u_ring.c	/^int main() {$/;"	f	typeref:typename:int
+main.o	Makefile	/^main.o:$/;"	t
+main_v1	src/u_types/u_hash.c	/^static int main_v1(int argc, char* argv[] ) $/;"	f	typeref:typename:int	file:
+mem	inc/u_types/u_vector.h	/^    void** mem;        \/\/участок памяти, в котором находятся да/;"	m	struct:__anon97c58a830108	typeref:typename:void **
+memory_block	src/u_stdlib/u_mallocat.c	/^struct memory_block{$/;"	s	file:
+merge_heap	src/u_stdlib/u_mallocat.c	/^static inline void merge_heap(void)$/;"	f	typeref:typename:void	file:
+miDebuggerPath	.vscode/launch.json	/^            "miDebuggerPath": "\/usr\/bin\/gdb"$/;"	s	object:configurations.0
+n	inc/u_sellect/u_sellect.h	/^    unsigned int n;$/;"	m	struct:__anonc87802d30208	typeref:typename:unsigned int
+n	inc/u_types/u_chain.h	/^    size_t n;$/;"	m	struct:Array	typeref:typename:size_t
+n	src/u_math/u_fixed.c	/^        unsigned int n:16;  \/\/дробное$/;"	m	struct:__anon4ae4609e010a::__anon4ae4609e0208	typeref:typename:unsigned int:16	file:
+n_elem	inc/u_types/u_hash.h	/^  int n_elem;$/;"	m	struct:__anonb16484b40108	typeref:typename:int
+n_elem	inc/u_types/u_hash.h	/^  size_t n_elem;$/;"	m	struct:__anonb16484b40208	typeref:typename:size_t
+n_elem	inc/u_types/u_vector.h	/^    size_t n_elem;      \/\/число элементов$/;"	m	struct:__anon97c58a830108	typeref:typename:size_t
+name	.vscode/c_cpp_properties.json	/^            "name": "Linux",$/;"	s	object:configurations.0
+name	.vscode/launch.json	/^            "name": "gcc - Сборка и отладка активного файла",$/;"	s	object:configurations.0
+new_pid	src/u_application/u_pid.c	/^new_pid(float Kp,float Ki,float Kd, u_clock_t period)$/;"	f	typeref:typename:u_pid *
+next	inc/u_types/u_cstring.h	/^    struct u_string_t* next; \/\/-- следующая подстрока$/;"	m	struct:u_string_t	typeref:struct:u_string_t *
+next_chain	inc/u_types/u_chain.h	/^  struct chain* next_chain;$/;"	m	struct:chain	typeref:struct:chain *
+nodes	inc/u_types/u_hash.h	/^  hnode* nodes;$/;"	m	struct:__anonb16484b40108	typeref:typename:hnode *
+nodes	inc/u_types/u_hash.h	/^  hnode_v2* nodes;$/;"	m	struct:__anonb16484b40208	typeref:typename:hnode_v2 *
+nosort	src/u_types/tree_sort.c	/^int nosort[]={5,12,33,7,569,7,578,1};$/;"	v	typeref:typename:int[]
+ok	inc/u_types/u_graph.h	/^    u8 ok;$/;"	m	struct:__anonb7622ac20108	typeref:typename:u8
+old_val	inc/u_sellect/u_sellect.h	/^    unsigned int  old_val;$/;"	m	struct:__anonc87802d30108	typeref:typename:unsigned int
+options	.vscode/tasks.json	/^            "options": {$/;"	o	object:tasks.0
+options	.vscode/tasks.json	/^            "options": {$/;"	o	object:tasks.1
+pearson_hash	src/u_types/u_hash.c	/^size_t pearson_hash(char* key,size_t clamp)$/;"	f	typeref:typename:size_t
+period	inc/u_application/u_pid.h	/^    u_clock_t period;$/;"	m	struct:__anon35629c2c0108	typeref:typename:u_clock_t
+pop_data	src/u_types/u_ring.c	/^u8 pop_data(u_ring* ring){$/;"	f	typeref:typename:u8
+pop_queue	src/u_types/queue.c	/^int pop_queue(struct queue *q) {$/;"	f	typeref:typename:int
+pop_queue	src/u_types/queue_static.c	/^u32 pop_queue(struct queue *q) {$/;"	f	typeref:typename:u32
+preLaunchTask	.vscode/launch.json	/^            "preLaunchTask": "C\/C++: gcc build active file",$/;"	s	object:configurations.0
+prepare_pass_phrase	crypto/test.c	/^void prepare_pass_phrase(BYTE* hash,const char* str)$/;"	f	typeref:typename:void
+prev_delta	inc/u_application/u_pid.h	/^    float prev_delta;    $/;"	m	struct:__anon35629c2c0108	typeref:typename:float
+prew_chain	inc/u_types/u_chain.h	/^  struct chain* prew_chain;$/;"	m	struct:chain	typeref:struct:chain *
+print_chain	src/u_types/u_chain.c	/^static void print_chain(struct chain* ch)$/;"	f	typeref:typename:void	file:
+print_drob	src/u_math/u_fixed.c	/^void print_drob(u_fixed16 a){$/;"	f	typeref:typename:void
+print_queue	src/u_types/queue_static.c	/^void print_queue(struct queue *q) {$/;"	f	typeref:typename:void
+print_selected	src/u_types/u_chain.c	/^static void print_selected(struct chain* ch)$/;"	f	typeref:typename:void	file:
+print_w128	crypto/test.c	/^void print_w128(w128_t *x)$/;"	f	typeref:typename:void
+print_w128	crypto/кузнечик/main.c	/^void print_w128(w128_t *x)$/;"	f	typeref:typename:void
+problemMatcher	.vscode/tasks.json	/^            "problemMatcher": [$/;"	a	object:tasks.0
+problemMatcher	.vscode/tasks.json	/^            "problemMatcher": [$/;"	a	object:tasks.1
+proc_pid	src/u_application/u_pid.c	/^proc_pid(u_pid* Pid,float x,float setting)$/;"	f	typeref:typename:float
+process_alloc	src/u_stdlib/u_mallocat.c	/^static inline void* process_alloc(struct memory_block* heap_mb,u16 size){$/;"	f	typeref:typename:void *	file:
+program	.vscode/launch.json	/^            "program": "${workspaceFolder}\/${fileBasenameNoExtension}",$/;"	s	object:configurations.0
+push_data	src/u_types/u_ring.c	/^void push_data(u_ring* ring, u8 c){$/;"	f	typeref:typename:void
+q	crypto/kuznechik.h	/^    uint64_t q[2];$/;"	m	union:__anon3602e577010a	typeref:typename:uint64_t[2]
+q	src/u_types/queue_static.c	/^struct queue q;$/;"	v	typeref:struct:queue
+qu	src/u_types/queue.c	/^  void* qu;          \/\/элементы$/;"	m	struct:queue	typeref:typename:void *	file:
+qu	src/u_types/queue_static.c	/^  u8* qu[QMAX];          \/\/элементы$/;"	m	struct:queue	typeref:typename:u8 * []	file:
+queue	src/u_types/queue.c	/^struct queue $/;"	s	file:
+queue	src/u_types/queue_static.c	/^struct queue $/;"	s	file:
+quickSort	src/u_algorithm/fast.c	/^void quickSort(int *numbers, int left, int right)$/;"	f	typeref:typename:void
+quick_sort	src/u_algorithm/u_sort.c	/^void quick_sort(int *src, int n){$/;"	f	typeref:typename:void
+ratio	.vscode/settings.json	/^        "ratio": "c"$/;"	s	object:files.associations
+raw	src/u_math/u_fixed.c	/^    int raw;$/;"	m	union:__anon4ae4609e010a	typeref:typename:int	file:
+read_csv	src/u_application/u_csv.c	/^int read_csv(csv_grid* csv, char* name)$/;"	f	typeref:typename:int
+read_data	src/u_types/u_ring.c	/^void read_data(u8* dest, u16 n, u_ring* ring){$/;"	f	typeref:typename:void
+request	.vscode/launch.json	/^            "request": "launch",$/;"	s	object:configurations.0
+reverse	src/u_stdlib/u_string.c	/^static void reverse(char s[])$/;"	f	typeref:typename:void	file:
+right	inc/u_types/u_tree.h	/^  struct tnode_tag *right; \/\/ правый потомок$/;"	m	struct:tnode_tag	typeref:struct:tnode_tag *
+right	src/u_types/tree_sort.c	/^  struct tnode_tag *right; \/\/ правый потомок$/;"	m	struct:tnode_tag	typeref:struct:tnode_tag *	file:
+rows	inc/u_application/u_csv.h	/^    size_t rows;$/;"	m	struct:__anon347d25fb0108	typeref:typename:size_t
+rsbox	crypto/aes.c	/^static const uint8_t rsbox[256] = {$/;"	v	typeref:typename:const uint8_t[256]	file:
+s16	inc/u_stdlib/u_stddef.h	/^typedef signed short s16;$/;"	t	typeref:typename:signed short
+s16	src/u_types/queue.c	/^typedef signed short s16;$/;"	t	typeref:typename:signed short	file:
+s16	src/u_types/queue_static.c	/^typedef signed short s16;$/;"	t	typeref:typename:signed short	file:
+s32	inc/u_math/u_math.h	/^typedef  int s32;$/;"	t	typeref:typename:int
+s32	inc/u_stdlib/u_stddef.h	/^typedef signed int s32;$/;"	t	typeref:typename:signed int
+s32	src/u_math/u_math.c	/^typedef  int s32;$/;"	t	typeref:typename:int	file:
+s32	src/u_types/queue.c	/^typedef signed int s32;$/;"	t	typeref:typename:signed int	file:
+s32	src/u_types/queue_static.c	/^typedef signed int s32;$/;"	t	typeref:typename:signed int	file:
+s8	inc/u_stdlib/u_stddef.h	/^typedef signed char s8;$/;"	t	typeref:typename:signed char
+s8	src/u_types/queue.c	/^typedef signed char s8;$/;"	t	typeref:typename:signed char	file:
+s8	src/u_types/queue_static.c	/^typedef signed char s8;$/;"	t	typeref:typename:signed char	file:
+s_odt	src/u_application/s5_timers.c	/^u32 s_odt(u_timer* Tx, u32 tv, u16 set, u16 rst)$/;"	f	typeref:typename:u32
+s_odts	src/u_application/s5_timers.c	/^u32 s_odts(u_timer* Tx, u32 tv, u16 set, u16 rst)$/;"	f	typeref:typename:u32
+s_offdt	src/u_application/s5_timers.c	/^u32 s_offdt(u_timer* Tx, u32 tv, u16 set, u16 rst)$/;"	f	typeref:typename:u32
+s_pext	src/u_application/s5_timers.c	/^u32 s_pext(u_timer* Tx, u32 tv, u16 set, u16 rst)$/;"	f	typeref:typename:u32
+s_pulse	src/u_application/s5_timers.c	/^u32 s_pulse(u_timer* Tx, u32 tv, u16 set, u16 rst)$/;"	f	typeref:typename:u32
+sbox	crypto/aes.c	/^static const uint8_t sbox[256] = {$/;"	v	typeref:typename:const uint8_t[256]	file:
+set	inc/u_application/u_pid.h	/^    u16 set;$/;"	m	struct:__anon35629c2c0108	typeref:typename:u16
+set_ticks	src/u_application/s5_timers.c	/^static inline void set_ticks(clock_t a){$/;"	f	typeref:typename:void	file:
+set_ticks	src/u_application/s5_timers.c	/^static inline void set_ticks(uint32_t a){$/;"	f	typeref:typename:void	file:
+setupCommands	.vscode/launch.json	/^            "setupCommands": [$/;"	a	object:configurations.0
+sha256_final	crypto/sha256.c	/^void sha256_final(SHA256_CTX *ctx, BYTE hash[])$/;"	f	typeref:typename:void
+sha256_init	crypto/sha256.c	/^void sha256_init(SHA256_CTX *ctx)$/;"	f	typeref:typename:void
+sha256_transform	crypto/sha256.c	/^void sha256_transform(SHA256_CTX *ctx, const BYTE data[])$/;"	f	typeref:typename:void
+sha256_update	crypto/sha256.c	/^void sha256_update(SHA256_CTX *ctx, const BYTE data[], size_t len)$/;"	f	typeref:typename:void
+sin_table	src/u_math/table.c	/^unsigned int sin_table[] = {$/;"	v	typeref:typename:unsigned int[]
+sin_table	src/u_math/u_math.c	/^const unsigned int sin_table[] = {$/;"	v	typeref:typename:const unsigned int[]
+size	inc/u_types/u_hash.h	/^  size_t size;$/;"	m	struct:__anonb16484b40108	typeref:typename:size_t
+size	inc/u_types/u_hash.h	/^  size_t size;$/;"	m	struct:__anonb16484b40208	typeref:typename:size_t
+size	src/u_stdlib/u_mallocat.c	/^	u16 size:15;$/;"	m	struct:memory_block	typeref:typename:u16:15	file:
+size_queue	src/u_types/queue.c	/^  size_t size_queue; \/\/max размер очереди$/;"	m	struct:queue	typeref:typename:size_t	file:
+size_queue	src/u_types/queue_static.c	/^  size_t size_queue; \/\/max размер очереди$/;"	m	struct:queue	typeref:typename:size_t	file:
+solve_pid	src/u_application/u_pid.c	/^solve_pid(u_pid* Pid,float x,float setting)$/;"	f	typeref:typename:float	file:
+sstream	.vscode/settings.json	/^        "sstream": "c",$/;"	s	object:files.associations
+stack	inc/u_application/u_fsm.h	/^    u_vector stack; \/\/стэк функций$/;"	m	struct:__anon34b349350108	typeref:typename:u_vector
+stack_data	inc/u_application/u_fsm.h	/^    u_vector stack_data; \/\/стэк данных$/;"	m	struct:__anon34b349350108	typeref:typename:u_vector
+start_pos	src/u_types/u_ring.c	/^    s16 start_pos;$/;"	m	struct:__anon863785a90108	typeref:typename:s16	file:
+state	crypto/sha256.h	/^	WORD state[8];$/;"	m	struct:__anoned58ede40108	typeref:typename:WORD[8]
+state	inc/u_application/s5_timers.h	/^    u8 state:1;$/;"	m	struct:__anonea6a95760108	typeref:typename:u8:1
+state_pext	inc/u_application/s5_timers.h	/^    u8 state_pext:1;$/;"	m	struct:__anonea6a95760108	typeref:typename:u8:1
+state_t	crypto/aes.c	/^typedef uint8_t state_t[4][4];$/;"	t	typeref:typename:uint8_t[4][4]	file:
+stopAtEntry	.vscode/launch.json	/^            "stopAtEntry": false,$/;"	b	object:configurations.0
+str	inc/u_types/u_cstring.h	/^    char* str;$/;"	m	struct:u_string_t	typeref:typename:char *
+str_append	src/u_types/u_cstring.c	/^void str_append(u_string* str, char* cstring)$/;"	f	typeref:typename:void
+str_free	src/u_types/u_cstring.c	/^void str_free(u_string* str)$/;"	f	typeref:typename:void
+str_insert	src/u_types/u_cstring.c	/^void str_insert(u_string* str, size_t at, char* cstring)$/;"	f	typeref:typename:void
+str_refresh	src/u_types/u_cstring.c	/^u_string* str_refresh(u_string** _str)$/;"	f	typeref:typename:u_string *
+str_split	src/u_types/u_cstring.c	/^size_t str_split(u_string* str, char tokken)$/;"	f	typeref:typename:size_t
+str_to_char_array_a	src/u_types/u_cstring.c	/^size_t str_to_char_array_a(u_string* str, char*** arr)$/;"	f	typeref:typename:size_t
+string_len	src/u_types/u_cstring.c	/^size_t string_len(u_string* str)$/;"	f	typeref:typename:size_t
+stv	inc/u_application/s5_timers.h	/^    u_clock_t stv;$/;"	m	struct:__anonea6a95760108	typeref:typename:u_clock_t
+table_yes	src/u_types/u_hash.c	/^static char table_yes=0;$/;"	v	typeref:typename:char	file:
+tasks	.vscode/tasks.json	/^    "tasks": [$/;"	a
+test	src/u_types/u_tree.c	/^int test(int argc, char* argv[] ) $/;"	f	typeref:typename:int
+test_processing	src/u_application/s5_timers.c	/^int test_processing()$/;"	f	typeref:typename:int
+text	.vscode/launch.json	/^                    "text": "-enable-pretty-printing",$/;"	s	object:configurations.0.setupCommands.0
+timer	inc/u_application/u_pid.h	/^    u_timer timer;$/;"	m	struct:__anon35629c2c0108	typeref:typename:u_timer
+tnode	inc/u_types/u_tree.h	/^} tnode;$/;"	t	typeref:struct:tnode_tag
+tnode	src/u_types/tree_sort.c	/^} tnode;$/;"	t	typeref:struct:tnode_tag	file:
+tnode_tag	inc/u_types/u_tree.h	/^typedef struct tnode_tag$/;"	s
+tnode_tag	src/u_types/tree_sort.c	/^typedef struct tnode_tag$/;"	s	file:
+treeprint	src/u_types/tree_sort.c	/^void treeprint(tnode *tree)$/;"	f	typeref:typename:void
+treeprint	src/u_types/u_tree.c	/^void treeprint(tnode *tree)$/;"	f	typeref:typename:void
+type	.vscode/launch.json	/^            "type": "cppdbg",$/;"	s	object:configurations.0
+type	.vscode/tasks.json	/^            "type": "cppbuild",$/;"	s	object:tasks.0
+type	.vscode/tasks.json	/^            "type": "cppbuild",$/;"	s	object:tasks.1
+u16	inc/u_stdlib/u_stddef.h	/^typedef unsigned short u16;$/;"	t	typeref:typename:unsigned short
+u16	src/u_types/queue.c	/^typedef unsigned short u16;$/;"	t	typeref:typename:unsigned short	file:
+u16	src/u_types/queue_static.c	/^typedef unsigned short u16;$/;"	t	typeref:typename:unsigned short	file:
+u32	inc/u_math/u_math.h	/^typedef  unsigned int u32;$/;"	t	typeref:typename:unsigned int
+u32	inc/u_stdlib/u_stddef.h	/^typedef unsigned int u32;$/;"	t	typeref:typename:unsigned int
+u32	src/u_math/u_math.c	/^typedef  unsigned int u32;$/;"	t	typeref:typename:unsigned int	file:
+u32	src/u_types/queue.c	/^typedef unsigned int u32;$/;"	t	typeref:typename:unsigned int	file:
+u32	src/u_types/queue_static.c	/^typedef unsigned int u32;$/;"	t	typeref:typename:unsigned int	file:
+u8	inc/u_stdlib/u_stddef.h	/^typedef unsigned char u8;$/;"	t	typeref:typename:unsigned char
+u8	src/u_types/queue.c	/^typedef unsigned char u8;$/;"	t	typeref:typename:unsigned char	file:
+u8	src/u_types/queue_static.c	/^typedef unsigned char u8;$/;"	t	typeref:typename:unsigned char	file:
+uHEAP_SIZE	inc/u_stdlib/u_mallocat.h	/^#define uHEAP_SIZE /;"	d
+u_attach	src/u_types/u_chain.c	/^int u_attach(struct chain* first, struct chain* second)$/;"	f	typeref:typename:int
+u_clock_t	inc/u_application/s5_timers.h	/^typedef clock_t u_clock_t;$/;"	t	typeref:typename:clock_t
+u_clock_t	inc/u_application/s5_timers.h	/^typedef u32 u_clock_t;$/;"	t	typeref:typename:u32
+u_clock_t	inc/u_sellect/u_sellect.h	/^typedef clock_t u_clock_t;$/;"	t	typeref:typename:clock_t
+u_copy	src/u_types/u_chain.c	/^struct chain* u_copy(struct chain* ch)$/;"	f	typeref:struct:chain *
+u_cos	src/u_math/u_math.c	/^s32 u_cos(s32 deg){$/;"	f	typeref:typename:s32
+u_cut	src/u_types/u_chain.c	/^struct chain* u_cut(struct chain* ch)$/;"	f	typeref:struct:chain *
+u_fd_isset	src/u_sellect/u_sellect.c	/^int u_fd_isset(unsigned int* reg, fd_set * fds)$/;"	f	typeref:typename:int
+u_fd_set	src/u_sellect/u_sellect.c	/^void u_fd_set(unsigned int* reg, fd_set * fds)$/;"	f	typeref:typename:void
+u_find_first	src/u_types/u_chain.c	/^struct chain* u_find_first(struct chain* ch)$/;"	f	typeref:struct:chain *
+u_find_last	src/u_types/u_chain.c	/^struct chain* u_find_last(struct chain* ch)$/;"	f	typeref:struct:chain *
+u_fixed16	src/u_math/u_fixed.c	/^}u_fixed16;$/;"	t	typeref:union:__anon4ae4609e010a	file:
+u_free	src/u_stdlib/u_mallocat.c	/^void u_free(void* ptr)$/;"	f	typeref:typename:void
+u_free_chain	src/u_types/u_chain.c	/^void u_free_chain(struct chain* ch)$/;"	f	typeref:typename:void
+u_get_data_by_key	src/u_types/u_hash.c	/^void* u_get_data_by_key(hash_table* tab,int key)$/;"	f	typeref:typename:void *
+u_get_heap	src/u_stdlib/u_mallocat.c	/^u8* u_get_heap(void)$/;"	f	typeref:typename:u8 *
+u_graph	inc/u_types/u_graph.h	/^}u_graph;$/;"	t	typeref:struct:__anonb7622ac20308
+u_graph_BFS_by_name	src/u_types/u_graph.c	/^void u_graph_BFS_by_name(u_graph* graph, char* vert_name, u_vector* neighbors)$/;"	f	typeref:typename:void
+u_graph_BFS_by_num	src/u_types/u_graph.c	/^void u_graph_BFS_by_num(u_graph* graph, size_t num_vertex, u_vector* neighbors)$/;"	f	typeref:typename:void
+u_graph_Dijkstra	src/u_types/u_graph.c	/^void u_graph_Dijkstra(u_graph* graph, char* node)$/;"	f	typeref:typename:void
+u_graph_E	inc/u_types/u_graph.h	/^}u_graph_E;$/;"	t	typeref:struct:__anonb7622ac20208
+u_graph_V	inc/u_types/u_graph.h	/^}u_graph_V;$/;"	t	typeref:struct:__anonb7622ac20108
+u_graph_add_v	src/u_types/u_graph.c	/^void u_graph_add_v(u_graph* graph, char* vertex_name)$/;"	f	typeref:typename:void
+u_graph_bfs_wires	src/u_types/u_graph.c	/^void u_graph_bfs_wires(u_graph* graph, size_t num_wire,  u_vector* wires)$/;"	f	typeref:typename:void
+u_graph_bind_vertex	src/u_types/u_graph.c	/^void u_graph_bind_vertex(u_graph* graph, char* wire_name, char* a, char* b, u32 Bec)$/;"	f	typeref:typename:void
+u_graph_deinit	src/u_types/u_graph.c	/^void u_graph_deinit(u_graph* graph)$/;"	f	typeref:typename:void
+u_graph_find_min	src/u_types/u_graph.c	/^u32 u_graph_find_min(u_graph* graph)$/;"	f	typeref:typename:u32
+u_graph_get_connected_wires	src/u_types/u_graph.c	/^void u_graph_get_connected_wires(u_graph* graph, size_t ind, u_vector* indexes)$/;"	f	typeref:typename:void
+u_graph_get_neighbors	src/u_types/u_graph.c	/^void u_graph_get_neighbors(u_graph* graph, size_t ind, u_vector* indexes)$/;"	f	typeref:typename:void
+u_graph_init	src/u_types/u_graph.c	/^void u_graph_init(u_graph* graph)$/;"	f	typeref:typename:void
+u_graph_name_to_vertex	src/u_types/u_graph.c	/^size_t u_graph_name_to_vertex(u_graph* graph, char* vert_name)$/;"	f	typeref:typename:size_t
+u_graph_name_to_wire	src/u_types/u_graph.c	/^size_t u_graph_name_to_wire(u_graph* graph, char*  wire_name)$/;"	f	typeref:typename:size_t
+u_graph_print_short_way	src/u_types/u_graph.c	/^void u_graph_print_short_way(u_graph* graph, char* A, char* B)$/;"	f	typeref:typename:void
+u_graph_print_wires	src/u_types/u_graph.c	/^void u_graph_print_wires(u_graph* graph)$/;"	f	typeref:typename:void
+u_heap	src/u_stdlib/u_mallocat.c	/^static u8 u_heap[uHEAP_SIZE]={1|(((uHEAP_SIZE-sizeof(struct memory_block))<<1)&0xff),(((uHEAP_SI/;"	v	typeref:typename:u8[]	file:
+u_insert_after	src/u_types/u_chain.c	/^struct chain* u_insert_after(struct chain* dest, void* data, size_t n)$/;"	f	typeref:struct:chain *
+u_insert_after_ch	src/u_types/u_chain.c	/^struct chain* u_insert_after_ch(struct chain* dest, struct chain* ch)$/;"	f	typeref:struct:chain *
+u_insert_before	src/u_types/u_chain.c	/^struct chain* u_insert_before(struct chain* dest, void* data, size_t n)$/;"	f	typeref:struct:chain *
+u_insert_before_ch	src/u_types/u_chain.c	/^struct chain* u_insert_before_ch(struct chain* dest, struct chain* ch)$/;"	f	typeref:struct:chain *
+u_intToHex	src/u_stdlib/u_string.c	/^void u_intToHex(unsigned int n, char* s)$/;"	f	typeref:typename:void
+u_intToStr	src/u_stdlib/u_string.c	/^void u_intToStr(unsigned int n, char* s)$/;"	f	typeref:typename:void
+u_intToStr	src/u_stdlib/u_string.c	/^void* u_intToStr(int integer){$/;"	f	typeref:typename:void *
+u_int_to_fixed16	src/u_math/u_fixed.c	/^u_fixed16 u_int_to_fixed16(short m,unsigned short n){$/;"	f	typeref:typename:u_fixed16
+u_isdigit	src/u_stdlib/u_string.c	/^int u_isdigit(char ch)$/;"	f	typeref:typename:int
+u_isspace	src/u_stdlib/u_string.c	/^int u_isspace(char ch)$/;"	f	typeref:typename:int
+u_isupper	src/u_stdlib/u_string.c	/^int u_isupper(char ch)$/;"	f	typeref:typename:int
+u_isxdigit	src/u_stdlib/u_string.c	/^int u_isxdigit(char ch)$/;"	f	typeref:typename:int
+u_ln	src/u_math/u_fixed.c	/^u_fixed16 u_ln(u_fixed16 A){$/;"	f	typeref:typename:u_fixed16
+u_malloc	src/u_stdlib/u_mallocat.c	/^void* u_malloc(size_t size){$/;"	f	typeref:typename:void *
+u_memcpy	src/u_stdlib/u_mallocat.c	/^void* u_memcpy(void *__dest, const void *__src, size_t __n)$/;"	f	typeref:typename:void *
+u_memset	src/u_stdlib/u_mallocat.c	/^void* u_memset(void *__s, int __c, size_t __n)$/;"	f	typeref:typename:void *
+u_new_chain	src/u_types/u_chain.c	/^struct chain* u_new_chain(void* _data, size_t n)$/;"	f	typeref:struct:chain *
+u_pid	inc/u_application/u_pid.h	/^}u_pid;$/;"	t	typeref:struct:__anon35629c2c0108
+u_pow	src/u_math/u_fixed.c	/^u_fixed16 u_pow(u_fixed16 A, u_fixed16 X){$/;"	f	typeref:typename:u_fixed16
+u_realloc	src/u_stdlib/u_mallocat.c	/^void* u_realloc (void *__ptr, size_t __size)$/;"	f	typeref:typename:void *
+u_rewrite_chain	src/u_types/u_chain.c	/^void u_rewrite_chain(struct chain* ch,void* data, size_t n)$/;"	f	typeref:typename:void
+u_ring	src/u_types/u_ring.c	/^}u_ring;$/;"	t	typeref:struct:__anon863785a90108	file:
+u_select	src/u_sellect/u_sellect.c	/^int u_select (int n, fd_set * __fds,  u_clock_t  __timeout)$/;"	f	typeref:typename:int
+u_sin	src/u_math/u_math.c	/^s32 u_sin(s32 deg){$/;"	f	typeref:typename:s32
+u_sqrt	src/u_math/u_fixed.c	/^u_fixed16 u_sqrt(u_fixed16 A)$/;"	f	typeref:typename:u_fixed16
+u_sqrt	src/u_math/u_math.c	/^u32 u_sqrt(u32 A)$/;"	f	typeref:typename:u32
+u_str_init_a	src/u_types/u_cstring.c	/^u_string* u_str_init_a(u_string** str, char* cstring)$/;"	f	typeref:typename:u_string *
+u_str_len	src/u_types/u_cstring.c	/^size_t u_str_len(u_string* Str)$/;"	f	typeref:typename:size_t
+u_strchr	src/u_stdlib/u_string.c	/^char* u_strchr (const char *__s, int __c){$/;"	f	typeref:typename:char *
+u_string	inc/u_types/u_cstring.h	/^}u_string;$/;"	t	typeref:struct:u_string_t
+u_string_t	inc/u_types/u_cstring.h	/^typedef struct u_string_t$/;"	s
+u_strlen	src/u_stdlib/u_string.c	/^size_t u_strlen (const char *__s){$/;"	f	typeref:typename:size_t
+u_strncmp	src/u_stdlib/u_string.c	/^int u_strncmp(const char* __str1, const char* __str2, size_t __n){$/;"	f	typeref:typename:int
+u_strrchr	src/u_stdlib/u_string.c	/^char* u_strrchr(const char *__s, int __c){$/;"	f	typeref:typename:char *
+u_strrevchr	src/u_stdlib/u_string.c	/^char* u_strrevchr(const char* line, int len , const char chr){$/;"	f	typeref:typename:char *
+u_strstr	src/u_stdlib/u_string.c	/^char* u_strstr(const char* __haystack, const char* __needle){$/;"	f	typeref:typename:char *
+u_timer	inc/u_application/s5_timers.h	/^}u_timer;$/;"	t	typeref:struct:__anonea6a95760108
+u_tolower	src/u_stdlib/u_string.c	/^char u_tolower(char ch)$/;"	f	typeref:typename:char
+u_vector	inc/u_types/u_vector.h	/^}u_vector;$/;"	t	typeref:struct:__anon97c58a830108
+u_vector_at	src/u_types/u_vector.c	/^void* u_vector_at(u_vector* vec,size_t at)$/;"	f	typeref:typename:void *
+u_vector_cmp	src/u_types/u_vector.c	/^int u_vector_cmp(u_vector* vec,size_t ind,void* el)$/;"	f	typeref:typename:int
+u_vector_deinit	src/u_types/u_vector.c	/^void u_vector_deinit(u_vector* vec,void(*free_func)(void*))$/;"	f	typeref:typename:void
+u_vector_find	src/u_types/u_vector.c	/^void* u_vector_find(u_vector* vec,int(*cmp)(void* el, void* comparation),void* comparation )$/;"	f	typeref:typename:void *
+u_vector_find_indx	src/u_types/u_vector.c	/^int u_vector_find_indx(u_vector* vec,int(*cmp)(void* el, void* comparation),void* comparation )$/;"	f	typeref:typename:int
+u_vector_get_indx	src/u_types/u_vector.c	/^int u_vector_get_indx(u_vector* vec,void* el)$/;"	f	typeref:typename:int
+u_vector_init	src/u_types/u_vector.c	/^void u_vector_init(u_vector* vec)$/;"	f	typeref:typename:void
+u_vector_is_exist	src/u_types/u_vector.c	/^int u_vector_is_exist(u_vector* vec,void* el)$/;"	f	typeref:typename:int
+u_vector_pop_back	src/u_types/u_vector.c	/^void* u_vector_pop_back(u_vector* vec)$/;"	f	typeref:typename:void *
+u_vector_push_back	src/u_types/u_vector.c	/^void u_vector_push_back(u_vector* vec, void* el)$/;"	f	typeref:typename:void
+ufree_func	inc/u_stdlib/u_stdlib.h	/^typedef void(*ufree_func)(void*);$/;"	t	typeref:typename:void (*)(void *)
+update	src/u_application/u_fsm.c	/^update(fsm* f)$/;"	f	typeref:typename:int
+vals	src/u_types/u_hash.c	/^static char* vals[]= {"hello","my", "beautifull",  "world",     "puma",  "best",   "regards"};$/;"	v	typeref:typename:char * []	file:
+value	inc/u_application/u_pid.h	/^    float value; \/\/--задание на выход$/;"	m	struct:__anon35629c2c0108	typeref:typename:float
+version	.vscode/c_cpp_properties.json	/^    "version": 4$/;"	n
+version	.vscode/tasks.json	/^    "version": "2.0.0"$/;"	s
+vertex_name	inc/u_types/u_graph.h	/^    char vertex_name[8];$/;"	m	struct:__anonb7622ac20108	typeref:typename:char[8]
+w128_t	crypto/kuznechik.h	/^} w128_t;$/;"	t	typeref:union:__anon3602e577010a
+weight	inc/u_types/u_graph.h	/^    u32 weight;$/;"	m	struct:__anonb7622ac20108	typeref:typename:u32
+weight	inc/u_types/u_graph.h	/^    u32 weight;$/;"	m	struct:__anonb7622ac20208	typeref:typename:u32
+wire	inc/u_types/u_graph.h	/^    size_t wire;$/;"	m	struct:__anonb7622ac20108	typeref:typename:size_t
+write_data	src/u_types/u_ring.c	/^void write_data(u_ring* ring, u8* src, u16 n){$/;"	f	typeref:typename:void
+xtime	crypto/aes.c	/^static uint8_t xtime(uint8_t x)$/;"	f	typeref:typename:uint8_t	file:
