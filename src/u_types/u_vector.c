@@ -207,7 +207,7 @@ u_vector_float_copy_new(u_vector_float* vec)
     u_vector_float* rv = u_vector_float_new();
     rv->n_elem=vec->n_elem;
     rv->mem=calloc(vec->n_elem,sizeof(float));
-    memcpy(rv->mem,vec->mem,sizeof(float)*vec->n_elem);
+    memcpy(rv->mem,vec->mem,sizeof(float)*(vec->n_elem));
     return rv;
 }
 
@@ -232,7 +232,7 @@ int u_vector_float_is_exist(u_vector_float* vec,float el)
     return 0;
 }
 
-int u_vector_float_get_indx(u_vector_float* vec,float el)
+size_t u_vector_float_get_indx(u_vector_float* vec,float el)
 {
     if(!vec)return -1;
     for (size_t i = 0; i < vec->n_elem; i++)
@@ -248,6 +248,32 @@ float u_vector_float_get_last(u_vector_float* vec){
     return vec->mem[vec->n_elem-1];
 }
 
+float 
+u_vector_float_min(u_vector_float* vec)
+{
+    if(!vec)return 0.;
+    float min=u_vector_float_at(vec,0);
+    float tmp;
+    for (size_t i = 1; i < vec->n_elem; i++)
+    {
+        tmp=u_vector_float_at(vec,i);
+        min=min<tmp?min:tmp;
+    }
+    return min;
+}
+float 
+u_vector_float_max(u_vector_float* vec)
+{
+    if(!vec)return 0.;
+    float max=u_vector_float_at(vec,0);
+    float tmp;
+    for (size_t i = 1; i < vec->n_elem; i++)
+    {
+        tmp=u_vector_float_at(vec,i);
+        max=max<tmp?tmp:max;
+    }
+    return max;
+}
 // int u_vector_find_indx(u_vector* vec,int(*cmp)(void* el, void* comparation),void* comparation )
 // {
 //     if(!vec)return -1;

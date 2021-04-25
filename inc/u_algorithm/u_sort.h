@@ -1,17 +1,17 @@
 #ifndef __U_SORT_H__
 #define __U_SORT_H__
+#include <stddef.h>
 
 
-
-extern void insert_sort_const(int* dest, const int* src, int n);
-extern void insert_sort(int* src, int n);
-extern int find_min(int* src, int n);
-extern void choise_sort(int* src, int n);
-extern void bubble_sort(int* src, int n);
-extern void quick_sort(int *src, int n);
-extern void Gnome_sort( int *mas,int n);
-
-extern void quickSort(int *numbers, int left, int right);
+ void insert_sort_const(int* dest, const int* src, int n);
+ void insert_sort(int* src, int n);
+ int find_min(int* src, int n);
+ void choise_sort(int* src, int n);
+ void bubble_sort(int* src, int n);
+ void quick_sort(int *src, int n);
+ void Gnome_sort( int *mas,int n);
+ void bubble_sortf(float* src, size_t n);
+ void quickSort(int *numbers, int left, int right);
 
 
 

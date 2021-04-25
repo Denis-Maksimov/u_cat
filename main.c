@@ -65,7 +65,7 @@ baz(fsm* f,void* data)
 
 #include <unistd.h>
 #include <u_application/u_ema.h>
-
+#include <math.h>
 int main(int argc, char const *argv[])
 {
   fsm* fv=fsm_new(foo);
@@ -77,20 +77,44 @@ int main(int argc, char const *argv[])
 //   test_processing();
 
     u_ema* ma=u_ema_new();
-    u_ema_set_N(ma, 9);
+    u_ema_set_N(ma, 5);
     float ppir=0.;
-    for (size_t i = 0; i < 25; i++)
+    for (size_t i = 0; i < 50; i++)
     {
-        ppir+=25.;
+        ppir=((float)(sinf((((float)i)/50.)*3.14)));
         u_ema_push( ma, ppir);
     }
-    for (size_t i = 0; i < 25; i++)
-    {
-        ppir-=25.;
-        u_ema_push( ma, ppir);
-    }
+    // for (size_t i = 0; i < 25; i++)
+    // {
+    //     ppir-=25.;
+    //     u_ema_push( ma, ppir);
+    //     // ma->value->mem[i];
+    // }
     printf("-------------MMM----------\n");
     ema_print(ma);
+    printf("Pirson: %f\n",u_r(ma->ema,ma->value));
+    u_ivr* var= u_new_IVR(ma->value);
+    printf("median: %f\n",u_median_IVR(var));
+    printf("moda: %f\n",u_moda_IVR(var));
+    printf("n: %i\n",var->n);
+    for (size_t i = 0; i < var->IVR->n_elem; i++)
+    {
+      printf("%i: ",i+1);
+      if(i)
+        if(i==var->IVR->n_elem-1)
+        {
+           printf("AVR: [%f;inf] ", (var->min+(var->delta*(i-1))));
+        }
+        else
+          printf("AVR: [%f;%f] ", var->min+var->delta*(i-1), var->min+(var->delta*i));
+        else
+          printf("AVR: [-inf;%f] ",(var->min+(var->delta*(i))));
+      
+      printf("IVR: %f  ",var->IVR->mem[i]);
+      printf("F: %f\n",var->F->mem[i]);
+    }
+    
+   
 
   return 0;
 }

@@ -44,8 +44,11 @@ STDLIB_API float u_vector_float_pop_back(u_vector_float* vec);
 STDLIB_API float u_vector_float_at(u_vector_float* vec,size_t at);
 STDLIB_API int u_vector_float_cmp(u_vector_float* vec,size_t ind,float el);
 STDLIB_API int u_vector_float_is_exist(u_vector_float* vec,float el);
-STDLIB_API int u_vector_float_get_indx(u_vector_float* vec,float el);
+STDLIB_API size_t u_vector_float_get_indx(u_vector_float* vec,float el);
 STDLIB_API float u_vector_float_get_last(u_vector_float* vec);
+STDLIB_API float u_vector_float_max(u_vector_float* vec);
+STDLIB_API float u_vector_float_min(u_vector_float* vec);
+
 // STDLIB_API int u_vector_float_find_indx(u_vector_float* vec,int(*cmp)(void* el, void* comparation),void* comparation );
 u_vector_float*
 u_vector_float_copy_new(u_vector_float* vec);

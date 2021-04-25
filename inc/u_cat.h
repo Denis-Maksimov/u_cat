@@ -14,6 +14,7 @@
 #include "u_application/s5_timers.h"
 #include "u_application/u_fsm.h"
 #include "u_application/u_pid.h"
+#include "u_application/u_ema.h"
 //--------------------------
 #include "u_math/u_math.h"
 //--------------------------
