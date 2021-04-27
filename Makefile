@@ -14,6 +14,7 @@ OBJ=\
 ./src/u_application/u_pid.o \
 ./src/u_application/u_fsm.o \
 ./src/u_application/u_ema.o \
+./src/u_application/u_fuzzy.o \
 ./src/u_math/u_math.o \
 ./src/u_math/u_fixed.o \
 ./src/u_math/table.o \
@@ -52,6 +53,7 @@ libu_cat.a: $(OBJ)
 ./src/u_application/s5_timers.o:
 ./src/u_application/u_fsm.o:
 ./src/u_application/u_ema.o:
+./src/u_application/u_fuzzy.o:
 #--------------------------
 ./src/u_math/u_math.o:
 ./src/u_math/u_fixed.o:

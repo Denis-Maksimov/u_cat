@@ -66,6 +66,8 @@ baz(fsm* f,void* data)
 #include <unistd.h>
 #include <u_application/u_ema.h>
 #include <math.h>
+#include <u_application/u_fuzzy.h>
+
 int main(int argc, char const *argv[])
 {
   fsm* fv=fsm_new(foo);
@@ -114,7 +116,7 @@ int main(int argc, char const *argv[])
       printf("F: %f\n",var->F->mem[i]);
     }
     
-   
+   u_fuzzy_test();
 
   return 0;
 }
