@@ -12,14 +12,14 @@ typedef struct
 
 typedef void(*fsm_func)(fsm*,void*);
 
-void change_state(fsm* f, fsm_func func, void* data);
-void end_state(fsm* f);
-int update(fsm* f);
+void fsm_change_state(fsm* f, fsm_func func, void* data);
+void fsm_end_state(fsm* f);
+int fsm_update(fsm* f);
 
-fsm* fsm_new(fsm_func start_state_func);
+fsm* fsm_new(fsm_func start_state_func,void* data);
 void fsm_free(fsm* fv);
 
-void fsm_init(fsm* fv,fsm_func start_state_func);
+void fsm_init(fsm* fv,fsm_func start_state_func,void* data);
 void fsm_deinit(fsm* fv);
 
 

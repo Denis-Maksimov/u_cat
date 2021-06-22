@@ -16,6 +16,8 @@ typedef struct u_ema_t
 
 u_ema* u_ema_new(void);
 void u_ema_push(u_ema* ma, float val);
+float u_ema_pop(u_ema* ma);
+void u_ema_fwd(u_ema* ma, float val);
 void u_ema_free(u_ema* ma);
 void u_ema_solve(u_ema* ema, size_t N);
 void u_ema_attach_vector(u_ema* ema, u_vector_float* value);

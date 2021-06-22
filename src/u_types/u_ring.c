@@ -1,160 +1,215 @@
-/*********************
-*  Кольцевой буффер  *
-**********************/
-// #include "../inc/u_stddef.h"
-#include <u_stdlib/u_stddef.h>
 #include <stdio.h>
-#include <ctype.h>
 #include <string.h>
-void hexdump(void *mem, unsigned int len);
-#define MAX_LEN_MSG 32
 
-typedef struct 
+#include <stdlib.h>
+#include <u_types/u_ring.h>
+
+typedef void (*free_f)(void *);
+
+size_t u_ring_calc_len(u_ring_buf *rb)
 {
-    s8 buffer[MAX_LEN_MSG];
-    s16 end_pos_at_end;
-    s16 start_pos;
-}u_ring;
-
-
-void push_data(u_ring* ring, u8 c){
-    if(ring->end_pos_at_end==0) {
-        ring->end_pos_at_end=MAX_LEN_MSG;
-        ring->buffer[MAX_LEN_MSG-ring->end_pos_at_end]=c;
-        return;
-    }
-    
-    ring->buffer[MAX_LEN_MSG-ring->end_pos_at_end]=c;
-    ring->end_pos_at_end--;
-    if(ring->end_pos_at_end<1) {ring->end_pos_at_end=MAX_LEN_MSG;}
-    // (ring->end_pos_at_end<=1)?(ring->end_pos_at_end=MAX_LEN_MSG):(ring->end_pos_at_end--);
-}
-
-void write_data(u_ring* ring, u8* src, u16 n){
-    for (size_t i = 0; i < n; i++)
+    if (rb->start_pos < rb->end_pos)
+        return rb->end_pos - rb->start_pos;
+    if (rb->start_pos > rb->end_pos)
     {
-        push_data(ring, src[i]);
-        // printf("push %d\n",i);
+        return rb->len - rb->end_pos + rb->start_pos;
     }
-    return;
-    
-}
-
-u8 pop_data(u_ring* ring){
-    s8 rv;
-    if(ring->start_pos==(MAX_LEN_MSG-ring->end_pos_at_end)) 
     return 0;
-    if (ring->start_pos<MAX_LEN_MSG){
-      rv = ring->buffer[ring->start_pos];
-      ring->start_pos++;
-      if(ring->start_pos==MAX_LEN_MSG)ring->start_pos=0;
-      return rv;
-    }
-    else{
-        rv =ring->buffer[ring->start_pos];
-        ring->start_pos=0;
-      return rv;
-      }
-
 }
-
-void read_data(u8* dest, u16 n, u_ring* ring){
-    for (size_t i = 0; i < n; i++)
+size_t u_ring_float_calc_len(u_ring_float *rb)
+{
+    if (rb->start_pos < rb->end_pos)
+        return rb->end_pos - rb->start_pos;
+    if (rb->start_pos > rb->end_pos)
     {
-       dest[i]=pop_data(ring);
+        return rb->len - rb->end_pos + rb->start_pos;
     }
-    
-}
-
-
-int main() {
-
-    u_ring ring={
-        .buffer="0123456789abcdef0123456789abcdef",
-        .end_pos_at_end=25,
-        .start_pos=1
-    };
-    u8 data[MAX_LEN_MSG];
-    read_data(data,MAX_LEN_MSG,&ring);
-    hexdump(data, MAX_LEN_MSG);
-    hexdump(ring.buffer, MAX_LEN_MSG);
-
-    write_data(&ring,"Message of fortune!",20);
-    read_data(data,MAX_LEN_MSG,&ring);
-    hexdump(data, MAX_LEN_MSG);
-    hexdump(ring.buffer, MAX_LEN_MSG);
-    
-    write_data(&ring,"Double kill!",13);
-    read_data(data,MAX_LEN_MSG,&ring);
-    hexdump(data, MAX_LEN_MSG);
-    // hexdump(ring.buffer, MAX_LEN_MSG);
-
-    write_data(&ring,"Double kill!",13);
-    read_data(data,MAX_LEN_MSG,&ring);
-    hexdump(data, MAX_LEN_MSG);
-    // hexdump(ring.buffer, MAX_LEN_MSG);
-
-    write_data(&ring,"Double kill!",13);
-    read_data(data,MAX_LEN_MSG,&ring);
-    hexdump(data, MAX_LEN_MSG);
-    // hexdump(ring.buffer, MAX_LEN_MSG);
-
-    write_data(&ring,"Double kill!",13);
-    read_data(data,MAX_LEN_MSG,&ring);
-    hexdump(data, MAX_LEN_MSG);
-    hexdump(ring.buffer, MAX_LEN_MSG);
     return 0;
 }
 
-
-//------------------------------------------------------------------------------
-// hexdump, a very nice function, it's not mine.
-// I found it on the net somewhere some time ago... thanks to the author ;-)
-//------------------------------------------------------------------------------
-#ifndef HEXDUMP_COLS
-#define HEXDUMP_COLS 16
-#endif
-void hexdump(void *mem, unsigned int len)
+u_ring_buf *
+u_ring_new(size_t n_el, void (*free_f)(void *))
 {
-        unsigned int i, j;
+    u_ring_buf *rv = malloc(sizeof(u_ring_buf));
+    // rv->start_pos = n_el - 1;
+    rv->start_pos = 0;
+    rv->end_pos = 0;
 
-        for(i = 0; i < len + ((len % HEXDUMP_COLS) ? (HEXDUMP_COLS - len % HEXDUMP_COLS) : 0); i++)
+    rv->data = calloc(n_el + 1, sizeof(size_t));
+    memset(rv->data, 0, n_el * sizeof(size_t));
+    rv->len = n_el - 1;
+    rv->free_func = free_f;
+    return rv;
+}
+
+void u_ring_free(u_ring_buf *rb)
+{
+    if (rb->free_func)
+    {
+        rb->free_func(rb->data);
+    }
+    free(rb->data);
+    free(rb);
+}
+// void u_ring_resize(u_ring_buf* rb,size_t n_el)
+// {
+//     rb->data=realloc(rb->data,n_el);
+//     rb->len=n_el;
+// }
+
+void u_ring_fifo_push(u_ring_buf *rb, void *data)
+{
+    size_t ep = (rb->end_pos == rb->len) ? (0) : (rb->end_pos + 1);
+
+    if (ep == rb->start_pos)
+    {
+        if (rb->free_func)
         {
-                /* print offset */
-                if(i % HEXDUMP_COLS == 0)
-                {
-                        printf("0x%04x: ", i);
-                }
-
-                /* print hex data */
-                if(i < len)
-                {
-                        printf("%02x ", 0xFF & ((char*)mem)[i]);
-                }
-                else /* end of block, just aligning for ASCII dump */
-                {
-                        printf("   ");
-                }
-
-                /* print ASCII dump */
-                if(i % HEXDUMP_COLS == (HEXDUMP_COLS - 1))
-                {
-                        for(j = i - (HEXDUMP_COLS - 1); j <= i; j++)
-                        {
-                                if(j >= len) /* end of block, not really printing */
-                                {
-                                        putchar(' ');
-                                }
-                                else if(isprint((((char*)mem)[j] & 0x7F))) /* printable char */
-                                {
-                                        putchar(0xFF & ((char*)mem)[j]);
-                                }
-                                else /* other char */
-                                {
-                                        putchar('.');
-                                }
-                        }
-                        putchar('\n');
-                }
+            rb->free_func(rb->data);
         }
+        rb->start_pos = (rb->start_pos == rb->len) ? (0) : (rb->start_pos + 1);
+    }
+    ((size_t *)(rb->data))[rb->end_pos] = (size_t)data;
+    rb->end_pos = ep;
 }
+
+void *
+u_ring_fifo_pop(u_ring_buf *rb)
+{
+    if(!u_ring_calc_len(rb)) return 0;
+    size_t sp = (rb->start_pos == rb->len) ? (0) : (rb->start_pos + 1);
+
+    if (sp == rb->end_pos)
+    {
+        rb->end_pos = (rb->end_pos == rb->len) ? (0) : (rb->end_pos + 1);
+    }
+    // ((size_t*)(rb->data))[rb->end_pos]=data;
+    void *rv = ((rb->data))[rb->start_pos];
+    rb->start_pos = sp;
+    return rv;
+}
+
+//---------------------------------------------------------------
+
+u_ring_float*
+u_ring_float_new(size_t n_el)
+{
+    u_ring_float *rv = malloc(sizeof(u_ring_float));
+    // rv->start_pos = n_el - 1;
+    rv->start_pos = 0;
+    rv->end_pos = 0;
+
+    rv->data = calloc(n_el + 1, sizeof(float));
+    memset(rv->data, 0., n_el * sizeof(float));
+    rv->len = n_el - 1;
+    return rv;
+}
+void 
+u_ring_float_free(u_ring_float *rb)
+{
+    free(rb->data);
+    free(rb);
+}
+
+void 
+u_ring_float_fifo_push(u_ring_float *rb, float data) 
+{
+    size_t ep = (rb->end_pos == rb->len) ? (0) : (rb->end_pos + 1);
+
+    if (ep == rb->start_pos) //--если перекрылись сдвигаем старт
+    {
+        rb->start_pos = (rb->start_pos == rb->len) ? (0) : (rb->start_pos + 1);
+    }
+    rb->data[rb->end_pos] = data;
+    rb->end_pos = ep;
+}
+
+float 
+u_ring_float_fifo_pop(u_ring_float *rb) 
+{
+    size_t len=u_ring_float_calc_len(rb);
+    if(!len) return 0.;
+    size_t sp = (rb->start_pos == rb->len) ? (0) : (rb->start_pos + 1);
+
+    if (sp == rb->end_pos)
+    {
+        rb->end_pos = (rb->end_pos == rb->len) ? (0) : (rb->end_pos + 1);
+    }
+    // ((size_t*)(rb->data))[rb->end_pos]=data;
+    float rv = rb->data[rb->start_pos];
+    rb->start_pos = sp;
+    return rv;
+}
+
+float 
+u_ring_float_max(u_ring_float *rb)
+{
+    size_t len=u_ring_float_calc_len(rb);
+    if(!len) return 0.;
+
+    size_t iter=rb->start_pos;
+    float max = rb->data[iter];
+    
+    for (size_t i = 0; i < len; i++)
+    {
+       max = rb->data[iter]>max ? rb->data[iter] : max;
+       iter=iter+i>=rb->len?0:iter+1;
+    }
+    
+    return max;
+    
+}
+
+
+float 
+u_ring_float_min(u_ring_float *rb)
+{
+    size_t len=u_ring_float_calc_len(rb);
+    if(!len) return 0.;
+
+    size_t iter=rb->start_pos;
+    float min = rb->data[iter];
+    
+    for (size_t i = 0; i < len; i++)
+    {
+       min = rb->data[iter]<min ? rb->data[iter] : min;
+       iter=iter+i>=rb->len?0:iter+1;
+    }
+    
+    return min;
+    
+}
+
+void u_ring_float_resize(u_ring_float *rb, size_t n)
+{
+    size_t max = u_ring_float_calc_len(rb);
+    if (rb->len == n)
+        return;
+
+    float* new=calloc(n + 1, sizeof(float));
+    if (rb->len > n)
+    {
+        if (max > n)
+        {
+            
+            for (size_t i = 0; i < n; i++)
+            {
+                new[i]=u_ring_float_fifo_pop(rb);
+            }
+            free(rb->data);
+            rb->data=new;
+            rb->start_pos=0;
+            rb->end_pos=n;
+            return;
+        }
+        if (max <= n)
+        {
+            //TODO
+            /* code */
+        }
+    }
+    if (rb->len < n)
+        //TODO
+        ;
+}
+

@@ -112,8 +112,8 @@ u_fuzzy_update(u_fuzzy* fuzzy, float* _x, size_t _n)
             _mu[i]=u_gauss(_x[i], tmp->params[i], fuzzy->sigma);
             if(!i)min=max=_mu[0];
             else{
-                min=MIN(min,_mu[i]);
-                max=MAX(max,_mu[i]);
+                min=U_MIN(min,_mu[i]);
+                max=U_MAX(max,_mu[i]);
             }
         }
 

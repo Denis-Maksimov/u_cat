@@ -48,6 +48,8 @@ STDLIB_API size_t u_vector_float_get_indx(u_vector_float* vec,float el);
 STDLIB_API float u_vector_float_get_last(u_vector_float* vec);
 STDLIB_API float u_vector_float_max(u_vector_float* vec);
 STDLIB_API float u_vector_float_min(u_vector_float* vec);
+STDLIB_API float u_vector_float_pop_front(u_vector_float* vec);
+STDLIB_API float u_vector_fifo_forward(u_vector_float* vec, float el); // эквивалентно push_back+pop_front
 
 // STDLIB_API int u_vector_float_find_indx(u_vector_float* vec,int(*cmp)(void* el, void* comparation),void* comparation );
 u_vector_float*

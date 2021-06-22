@@ -27,7 +27,24 @@ u_ema_push(u_ema* ma, float val)
         );
 }
 
+float
+u_ema_pop(u_ema* ma)
+{
+    return u_vector_float_pop_front(ma->value);
+}
 
+void
+u_ema_fwd(u_ema* ma, float val)
+{
+    float alfa= 2./(1.+ (float)ma->N);
+    u_vector_fifo_forward(ma->value, val);
+    u_vector_fifo_forward(   
+                    ma->ema, 
+                    u_vector_float_get_last(ma->value)*(alfa)+
+                    u_vector_float_get_last(ma->ema)*(1-alfa)
+        );
+// u_vector_fifo_forward
+}
 
 void
 u_ema_free(u_ema* ma)

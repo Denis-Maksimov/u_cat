@@ -1,0 +1,16 @@
+CFLAGS=`pkg-config --cflags gtk+-3.0` -I./inc -g 
+LDFLAGS=`pkg-config --libs gtk+-3.0` -L. -lu_cat -lm
+
+LINK.o = $(CC) $(LDFLAGS) $(TARGET_ARCH)
+
+
+
+
+
+main: ug-plot.o main.o 
+	gcc ug-plot.o main.o $(LDFLAGS)
+main.o: 
+ug-plot.o:
+
+clean:
+	rm *.o 

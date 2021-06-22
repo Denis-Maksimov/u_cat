@@ -188,10 +188,55 @@ float u_vector_float_pop_back(u_vector_float* vec)
 
     vec->n_elem--;
     float rv = vec->mem[vec->n_elem];
+    if(vec->n_elem==0){
+        free(vec->mem);
+        return rv;
+    }
     vec->mem=realloc(vec->mem, sizeof(float)*vec->n_elem);
     return rv;
 }
 
+float u_vector_float_pop_front(u_vector_float* vec)
+{
+    if(!vec)return 0.;
+    if(!vec->n_elem)return 0.;
+
+    vec->n_elem--;
+    float rv = vec->mem[0];
+    // float rv = vec->mem[vec->n_elem];
+    if(vec->n_elem==0){
+        free(vec->mem);
+        return rv;
+    }
+    float* new_mem=calloc(vec->n_elem,sizeof(float));
+    memcpy(new_mem,&vec->mem[1],vec->n_elem);
+    free(vec->mem);
+    vec->mem=new_mem;
+    // vec->mem=realloc(vec->mem, sizeof(float)*vec->n_elem);
+    return rv;
+}
+
+float u_vector_fifo_forward(u_vector_float* vec, float el)
+{
+    if(!vec)return el;
+    if(!vec->n_elem)return el;
+
+    float rv = vec->mem[0];
+
+    if(vec->n_elem==1){
+        vec->mem[0]=el;
+        return rv;
+    }
+
+
+    float* new_mem=calloc(vec->n_elem,sizeof(float));
+    memcpy(new_mem,&vec->mem[1],(vec->n_elem-1)*sizeof(float));
+    free(vec->mem);
+    vec->mem=new_mem;
+    vec->mem[vec->n_elem-1]=el;
+
+    return rv;
+}
 
 float u_vector_float_at(u_vector_float* vec,size_t at)
 {

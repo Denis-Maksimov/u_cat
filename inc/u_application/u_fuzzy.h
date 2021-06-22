@@ -7,8 +7,8 @@
 #include <u_types/u_vector.h>
 
 
-#define MIN(x,y)    (((x)<(y))?(x):(y))
-#define MAX(x,y)    (((x)>(y))?(x):(y))
+#define U_MIN(x,y)    (((x)<(y))?(x):(y))
+#define U_MAX(x,y)    (((x)>(y))?(x):(y))
 
 typedef 
 enum {
