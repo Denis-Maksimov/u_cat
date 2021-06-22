@@ -26,9 +26,9 @@ U_CAT_OBJ=\
 ./src/u_types/u_vector.o \
 ./src/u_types/u_cstring.o \
 ./src/u_types/u_ring.o \
-./src/u_crypto/u_kuznechik.o \
-./src/u_network/u_network.o \
-./src/u_network/u_server.o 
+./src/u_crypto/u_kuznechik.o 
+# ./src/u_network/u_network.o \
+# ./src/u_network/u_server.o 
 
 MAIN_OBJ=\
 ./ug-plot.o \
