@@ -4,10 +4,10 @@
 /****************************
  * Уровень виджета
 * ***************************/
-#include <ug-indicator.h>
+#include <ug-arrow.h>
 // #include <u_application/u_fuzzy.h>
 
-struct _UgIndicatorPrivate
+struct _UgArrowPrivate
 {
     GtkDrawingArea parent;
     long value;
@@ -21,7 +21,7 @@ struct _UgIndicatorPrivate
 
 
 
-G_DEFINE_TYPE_WITH_PRIVATE(UgIndicator, ug_indicator, GTK_TYPE_DRAWING_AREA)
+G_DEFINE_TYPE_WITH_PRIVATE(UgArrow, ug_arrow, GTK_TYPE_DRAWING_AREA)
 
 
 
@@ -158,7 +158,7 @@ draw_int(cairo_t *cr, long d, double size)
 
 #include <math.h>
 static gboolean
-draw (GtkWidget *da, cairo_t   *cr,  UgIndicatorPrivate*  priv)
+draw (GtkWidget *da, cairo_t   *cr,  UgArrowPrivate*  priv)
 {
   gint width, height;
    width = gtk_widget_get_allocated_width (da);
@@ -169,12 +169,12 @@ draw (GtkWidget *da, cairo_t   *cr,  UgIndicatorPrivate*  priv)
     cairo_rectangle(cr,0,0, 330,40);
     cairo_fill(cr);
 
+    cairo_arc(cr,10.,10.,10.,0.,90.);
+
     cairo_set_line_width(cr,1);
     cairo_set_source_rgb(cr,0.,0.,0.);
     cairo_rectangle(cr,0,0, 330,40);
-    
     cairo_stroke(cr);
-    cairo_arc(cr,20.,20.,20.,3.14-0.5,0.5);
 
     draw_int(cr,priv->value, priv->size);
 
@@ -189,21 +189,21 @@ draw (GtkWidget *da, cairo_t   *cr,  UgIndicatorPrivate*  priv)
 
 
 void
-ug_indicator_set_value(UgIndicator *self, long digit)
+ug_arrow_set_value(UgArrow *self, long digit)
 {
-    UgIndicatorPrivate* priv=ug_indicator_get_instance_private(self);
+    UgArrowPrivate* priv=ug_arrow_get_instance_private(self);
     priv->value=digit;
     gtk_widget_queue_draw(GTK_WIDGET(self));
 }
 
 
 static void
-ug_indicator_init (UgIndicator *self)
+ug_arrow_init (UgArrow *self)
 {
     
     g_message("ViewBox init");
     gtk_widget_set_size_request(GTK_WIDGET(self),330,40);
-    UgIndicatorPrivate* priv=ug_indicator_get_instance_private(self);
+    UgArrowPrivate* priv=ug_arrow_get_instance_private(self);
     priv->size=10.;
     priv->value=0;
     g_signal_connect (self, "draw", G_CALLBACK (draw), priv);
@@ -214,34 +214,34 @@ ug_indicator_init (UgIndicator *self)
 
 
 typedef void(*f_func)(void*);
-void ug_indicator_finalize(GObject *object)
+void ug_arrow_finalize(GObject *object)
 {
-    UgIndicatorPrivate* priv=ug_indicator_get_instance_private(UG_INDICATOR(object));
+    UgArrowPrivate* priv=ug_arrow_get_instance_private(UG_ARROW(object));
     g_message("viewbox final");
 
-    G_OBJECT_CLASS(ug_indicator_parent_class)->finalize (object);
+    G_OBJECT_CLASS(ug_arrow_parent_class)->finalize (object);
 }
 
 static void
-default_write_signal_handler (UgIndicator *self, gpointer data)
+default_write_signal_handler (UgArrow *self, gpointer data)
 {
     g_message("default");
 }
 
 
 static void
-ug_indicator_class_init (UgIndicatorClass *klass)
+ug_arrow_class_init (UgArrowClass *klass)
 {
     GObjectClass *obj_class = G_OBJECT_CLASS (klass);
-    obj_class->finalize = ug_indicator_finalize;
+    obj_class->finalize = ug_arrow_finalize;
 }
 
 
 
 
 
-UgIndicator *
-ug_indicator_new (void)
+UgArrow *
+ug_arrow_new (void)
 {
-    return g_object_new(UG_INDICATOR_TYPE,NULL);
+    return g_object_new(UG_ARROW_TYPE,NULL);
 }

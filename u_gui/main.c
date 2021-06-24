@@ -59,12 +59,12 @@ void gui_test()
 
 }
 
-int cnt=0;
+long cnt=0;
 
-void tst_add()
+void tst_add(GtkWidget*btn, UgIndicator *self)
 {
     cnt++;
-    
+    ug_indicator_set_value(self, cnt);
     
 
 }
@@ -81,7 +81,7 @@ void gui_test2()
     GtkWidget *label = gtk_label_new("Hello,World!");
 
     GtkWidget *button_plus = gtk_button_new_with_label("+");
-    g_signal_connect (button, "clicked", G_CALLBACK (tst_add), label);
+    g_signal_connect (button_plus, "clicked", G_CALLBACK (tst_add), ind);
     gtk_label_set_text(GTK_LABEL(label),"beam");
 
     GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,5);
@@ -94,7 +94,7 @@ void gui_test2()
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(label));
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(button_plus));
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(button));
-     gtk_widget_set_size_request (GTK_WIDGET(ind), 90, 40);
+    //  gtk_widget_set_size_request (GTK_WIDGET(ind), 90, 40);
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(ind));
     gtk_widget_show_all(GTK_WIDGET(window));
 

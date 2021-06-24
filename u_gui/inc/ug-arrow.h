@@ -1,5 +1,5 @@
-#ifndef __UG_INDICATOR_H__
-#define __UG_INDICATOR_H__
+#ifndef __UG_ARROW_H__
+#define __UG_ARROW_H__
 
 
 
@@ -12,24 +12,24 @@
 G_BEGIN_DECLS
 
 
-#define UG_INDICATOR_TYPE (ug_indicator_get_type ())
+#define UG_ARROW_TYPE (ug_arrow_get_type ())
 
-G_DECLARE_DERIVABLE_TYPE (UgIndicator, ug_indicator, UG, INDICATOR, GtkDrawingArea)
+G_DECLARE_DERIVABLE_TYPE (UgArrow, ug_arrow, UG, ARROW, GtkDrawingArea)
 
-typedef struct _UgIndicator UgIndicator;
-typedef struct _UgIndicatorClass UgIndicatorClass;
-typedef struct _UgIndicatorPrivate UgIndicatorPrivate;
+typedef struct _UgArrow UgArrow;
+typedef struct _UgArrowClass UgArrowClass;
+typedef struct _UgArrowPrivate UgArrowPrivate;
 
 
 // void  UG_app_window_open (UGAppWindow *win, GFile *file);
 
-struct _UgIndicatorClass
+struct _UgArrowClass
 {
 		//--родительский класс
 		GtkDrawingAreaClass parent_class;
 
 		// guint signal_test_id;
-		// void (*_write) (UgIndicator *self, gpointer data);
+		// void (*_write) (UgArrow *self, gpointer data);
 		// void(*UG_app_win_new)(GApplication *app, GFile *file);
 		gpointer padding[20]; /* массив указателей; gpointer - переопределение void* */
 };
@@ -37,8 +37,8 @@ struct _UgIndicatorClass
 
 
 
-UgIndicator* ug_indicator_new(void);
-void ug_indicator_set_value(UgIndicator *self, long digit);
+UgArrow* ug_arrow_new(void);
+void ug_arrow_set_value(UgArrow *self, long digit);
 
 G_END_DECLS
 
