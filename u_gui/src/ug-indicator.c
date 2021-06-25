@@ -174,7 +174,7 @@ draw (GtkWidget *da, cairo_t   *cr,  UgIndicatorPrivate*  priv)
     cairo_rectangle(cr,0,0, 330,40);
     
     cairo_stroke(cr);
-    cairo_arc(cr,20.,20.,20.,3.14-0.5,0.5);
+    
 
     draw_int(cr,priv->value, priv->size);
 

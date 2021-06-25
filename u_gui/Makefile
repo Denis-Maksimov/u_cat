@@ -8,6 +8,7 @@ CFLAGS= -I./inc -g -O2
 MAIN_OBJ=\
 ./src/ug-plot.o \
 ./src/ug-indicator.o \
+./src/ug-arrow.o \
 ./main.o 
 
 MAIN_CFLAGS=`pkg-config --cflags gtk+-3.0` -I./inc -I../inc -g -c
@@ -26,6 +27,9 @@ main.o: main.c
 	$(CC) $^ $(MAIN_CFLAGS) -o$@
 
 ./src/ug-indicator.o: ./src/ug-indicator.c
+	$(CC) $^ $(MAIN_CFLAGS) -o$@
+
+./src/ug-arrow.o: ./src/ug-arrow.c
 	$(CC) $^ $(MAIN_CFLAGS) -o$@
 
 clean:

@@ -38,7 +38,7 @@ struct _UgArrowClass
 
 
 UgArrow* ug_arrow_new(void);
-void ug_arrow_set_value(UgArrow *self, long digit);
+void ug_arrow_set_value(UgArrow *self, double digit);
 
 G_END_DECLS
 

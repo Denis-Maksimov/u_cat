@@ -2,6 +2,7 @@
 
 #include <ug-plot.h>
 #include <ug-indicator.h>
+#include <ug-arrow.h>
 #include <u_cat.h>
 #include <math.h>
 
@@ -65,14 +66,18 @@ void tst_add(GtkWidget*btn, UgIndicator *self)
 {
     cnt++;
     ug_indicator_set_value(self, cnt);
-    
-
+}
+void tst_add1(GtkWidget*btn, UgArrow *self)
+{
+    static double cq=0.;
+    ug_arrow_set_value(self, cq);
+    cq+=0.01;
 }
 
 void gui_test2()
 {
 
-    UgIndicator *ind=ug_indicator_new();
+    
     GtkWidget *window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
 
     GtkWidget *button = gtk_button_new_with_label("EXIT");
@@ -80,22 +85,27 @@ void gui_test2()
     
     GtkWidget *label = gtk_label_new("Hello,World!");
 
-    GtkWidget *button_plus = gtk_button_new_with_label("+");
-    g_signal_connect (button_plus, "clicked", G_CALLBACK (tst_add), ind);
-    gtk_label_set_text(GTK_LABEL(label),"beam");
+    
+    
+
 
     GtkWidget *vbox = gtk_box_new(GTK_ORIENTATION_VERTICAL,5);
+    
+
+    GtkWidget *button_plus = gtk_button_new_with_label("+");
+    UgIndicator *ind=ug_indicator_new();
+    UgArrow *arrow=ug_arrow_new();
+
+    g_signal_connect (button_plus, "clicked", G_CALLBACK (tst_add), ind);
+    g_signal_connect (button_plus, "clicked", G_CALLBACK (tst_add1), arrow);
     gtk_container_add (GTK_CONTAINER (window), GTK_WIDGET(vbox));
 
-    
-
-
-    
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(label));
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(button_plus));
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(button));
     //  gtk_widget_set_size_request (GTK_WIDGET(ind), 90, 40);
-    gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(ind));
+    // gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(ind));
+    gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(arrow));
     gtk_widget_show_all(GTK_WIDGET(window));
 
 
