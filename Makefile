@@ -1,8 +1,8 @@
 
 CC=gcc
-CFLAGS= -I./inc -g -O2 
+CFLAGS= -I./inc -g -O2 -fPIC 
 
-.PHONY: all clean
+.PHONY: all clean lib run
 
 
 
@@ -16,8 +16,6 @@ U_CAT_OBJ=\
 ./src/u_application/u_fuzzy.o \
 ./src/u_application/u_dbg.o \
 ./src/u_math/u_math.o \
-./src/u_math/u_fixed.o \
-./src/u_math/table.o \
 ./src/u_stdlib/u_mallocat.o \
 ./src/u_stdlib/u_string.o \
 ./src/u_stdlib/u_mallocat.o \
@@ -26,6 +24,7 @@ U_CAT_OBJ=\
 ./src/u_types/u_vector.o \
 ./src/u_types/u_cstring.o \
 ./src/u_types/u_ring.o \
+./src/u_types/u_matrix.o \
 ./src/u_crypto/u_kuznechik.o 
 # ./src/u_network/u_network.o \
 # ./src/u_network/u_server.o 
@@ -54,8 +53,19 @@ CC=gcc
 # 	$(CC) $^ $(MAIN_CFLAGS)
 
 
-libu_cat.a: $(U_CAT_OBJ)
-	ar crs $@ $^
+# libu_cat.a: $(U_CAT_OBJ)
+# 	ar crs $@ $^
+
+
+run: main.c lib
+	gcc $< -I./inc -L. -lu_cat -Wl,-rpath,.
+
+
+lib: libu_cat.so
+
+
+libu_cat.so: $(U_CAT_OBJ)
+	gcc -shared -o$@ $^ -lm
 
 #--------------------------
 ./src/u_algorithm/u_sort.o:
@@ -83,6 +93,7 @@ libu_cat.a: $(U_CAT_OBJ)
 ./src/u_types/u_vector.o:
 ./src/u_types/u_cstring.o:
 ./src/u_types/u_ring.o:
+./src/u_types/u_matrix.o:
 #--------------------------
 ./src/u_network/u_network.o:
 ./src/u_network/u_server.o:

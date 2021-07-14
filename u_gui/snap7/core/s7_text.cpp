@@ -27,6 +27,7 @@
 extern "C" char* itoa(int value, char* result, int base);
 //---------------------------------------------------------------------------
 #ifndef OS_WINDOWS
+/*
 static char* itoa(int value, char* result, int base) {
 	// check that the base if valid
 	if (base < 2 || base > 36){
@@ -52,6 +53,7 @@ static char* itoa(int value, char* result, int base) {
 	}
 	return result;
 }
+*/
 #endif
 //---------------------------------------------------------------------------
 char* NumToString(int Value, int Base, int Len, char* Result)
@@ -780,9 +782,9 @@ char* EvtSrvText(TSrvEvent &Event, char* Result, int TextLen)
 				break;
         }
     }
-    else
+    else{
         strcpy(S,TcpServerEventText(Event,C));
-
+	}
 	strncpy(Result, S, TextLen);
 	return Result;
 }

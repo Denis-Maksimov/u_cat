@@ -1,9 +1,9 @@
 
 
-CC:=C:/MinGW/mingw64/bin/gcc.exe
-GPP=C:\MinGW\mingw64\bin\g++.exe
-AR :=C:/MinGW/mingw64/bin/ar.exe
-CXX=C:\MinGW\mingw64\bin\g++.exe
+CC:=gcc 
+GPP=g++ 
+AR :=ar 
+CXX=g++ 
 CPPFLAGS= -m64 -Wall -pedantic -Icore -Ilib -Isys -O2
 
 OBJS= \

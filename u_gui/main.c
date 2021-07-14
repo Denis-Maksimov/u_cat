@@ -3,6 +3,7 @@
 #include <ug-plot.h>
 #include <ug-indicator.h>
 #include <ug-arrow.h>
+#include <ug-plc.h>
 #include <u_cat.h>
 #include <math.h>
 
@@ -95,6 +96,7 @@ void gui_test2()
     GtkWidget *button_plus = gtk_button_new_with_label("+");
     UgIndicator *ind=ug_indicator_new();
     UgArrow *arrow=ug_arrow_new();
+    UgPlc* plc=ug_plc_new();
 
     g_signal_connect (button_plus, "clicked", G_CALLBACK (tst_add), ind);
     g_signal_connect (button_plus, "clicked", G_CALLBACK (tst_add1), arrow);
@@ -106,6 +108,7 @@ void gui_test2()
     //  gtk_widget_set_size_request (GTK_WIDGET(ind), 90, 40);
     // gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(ind));
     gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(arrow));
+    gtk_container_add (GTK_CONTAINER (vbox), GTK_WIDGET(plc));
     gtk_widget_show_all(GTK_WIDGET(window));
 
 

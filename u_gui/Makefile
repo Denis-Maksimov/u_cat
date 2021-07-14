@@ -9,7 +9,9 @@ MAIN_OBJ=\
 ./src/ug-plot.o \
 ./src/ug-indicator.o \
 ./src/ug-arrow.o \
+./src/ug-plc.o \
 ./main.o 
+
 
 MAIN_CFLAGS=`pkg-config --cflags gtk+-3.0` -I./inc -I../inc -g -c
 MAIN_LIBS=`pkg-config --libs gtk+-3.0` -lm -lu_cat -lsnap7 
@@ -30,6 +32,9 @@ main.o: main.c
 	$(CC) $^ $(MAIN_CFLAGS) -o$@
 
 ./src/ug-arrow.o: ./src/ug-arrow.c
+	$(CC) $^ $(MAIN_CFLAGS) -o$@
+
+./src/ug-plc.o: ./src/ug-plc.c
 	$(CC) $^ $(MAIN_CFLAGS) -o$@
 
 clean:
