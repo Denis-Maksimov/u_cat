@@ -1,7 +1,8 @@
 #ifndef U_RING_H
 #define U_RING_H
-#include <stdint.h>
-
+// #include <stdint.h>
+#include <u_stdlib/u_stddef.h>
+C_START
 typedef struct 
 {
     void** data;
@@ -37,5 +38,5 @@ float u_ring_float_fifo_pop(u_ring_float* rb);
 float u_ring_float_max(u_ring_float *rb);
 float u_ring_float_min(u_ring_float *rb);
 
-
+C_END
 #endif // !U_RING_H

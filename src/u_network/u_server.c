@@ -6,6 +6,7 @@
 static void 
 std_close_handler(fsm* f,u_server* srv)
 {
+    
     shutdown(srv->io.out,SHUT_RDWR);
     u_close_sock(srv->io.out);
     puts("SHUTDOWN");
@@ -24,7 +25,7 @@ std_wr_handler(fsm* f,u_server* srv)
     ssize_t i=send( srv->io.out, msg, 14, 0);
     printf("sendok:%d\n",i);
     fflush(stdout);
-    fsm_change_state(f,std_close_handler,srv);
+    fsm_change_state(f,(fsm_func)std_close_handler,srv);
 
     char* data_from_client=u_vector_pop_back(srv->buffer);
     // printf("Received data:\n%.*s\n",1024, data_from_client);
@@ -54,9 +55,9 @@ std_rd_handler(fsm* f,u_server* srv)
             u_vector_push_back(srv->buffer, buff);
 
             if(srv->fsm_wr)
-            fsm_change_state(srv->fsm_wr,std_wr_handler,srv);
+            fsm_change_state(srv->fsm_wr,(fsm_func)std_wr_handler,srv);
             else
-            srv->fsm_wr=fsm_new(std_wr_handler,srv);
+            srv->fsm_wr=fsm_new((fsm_func)std_wr_handler,srv);
             // return;
         }
     fsm_end_state(f);
@@ -242,8 +243,8 @@ void u_server_send_to(u_server* srv,const void *buf, size_t len, uint32_t ip,uin
     addr.sin_port=htons(port);//порт
     addr.sin_addr.s_addr=(ip);
 
-     struct sockaddr dest_addr;
-    sendto(srv->io.in, buf, len, 0, &addr, sizeof(addr));
+    struct sockaddr* dest_addr=(struct sockaddr*)(&addr);
+    sendto(srv->io.in, buf, len, 0, dest_addr, sizeof(struct sockaddr));
 }
 
 //.....................................................

@@ -1,37 +1,24 @@
-#ifndef __S5_TIMERS_H__
-#define __S5_TIMERS_H__
+#ifndef __U5_TIMERu_H__
+#define __U5_TIMERu_H__
 
 #include <u_stdlib/u_stddef.h>
-C_START
-// #ifndef U_STDDEF_H
-// #include <stdint.h>
-// typedef uint32_t u32;
-// typedef uint16_t u16;
-// typedef uint8_t u8;
 
-// typedef int32_t s32;
-// typedef int16_t s16;
-// typedef int8_t s8;
-// #endif
-#ifdef __MY_BARE_ARM__
-extern uint32_t SysTick_VAL;
-typedef u32 u_clock_t;
-#else
+
 #include <time.h>
+C_START
 // uint32_t SysTick_VAL;
-typedef unsigned long long u_clock_t;
-#endif // !1
-
+// typedef clock_t u_clock_t;
+typedef double u_timeval_t;
 
 
 
 typedef struct
 {
-    u_clock_t stv;
+    u_timeval_t stv;
     // u32 value;
     u8 state:1;
     u8 state_pext:1;
-}u_timer;
+}u_timer_double;
 
 /*************************************************
 * Формирователь импульса
@@ -47,7 +34,7 @@ typedef struct
 * ___|▔▔▔▔▔▔▔▔▔▔▔|______      tv
 *
 **************************************************/
-u32 s_pulse(u_timer* Tx, u32 tv, u16 set, u16 rst);
+u32 u_pulse(u_timer_double* Tx, u_timeval_t tv, u16 set, u16 rst);
 
 
 
@@ -62,7 +49,7 @@ u32 s_pulse(u_timer* Tx, u32 tv, u16 set, u16 rst);
 * ___|▔▔▔▔▔▔▔▔▔▔▔|______      tv
 *
 **************************************************/
-u32 s_pext(u_timer* Tx, u32 tv, u16 set, u16 rst);
+u32 u_pext(u_timer_double* Tx, u_timeval_t tv, u16 set, u16 rst);
 
 
 /*************************************************
@@ -75,7 +62,7 @@ u32 s_pext(u_timer* Tx, u32 tv, u16 set, u16 rst);
 * ___|▔▔|_______________      tv
 *
 **************************************************/
-u32 s_odt(u_timer* Tx, u32 tv, u16 set, u16 rst);
+u32 u_odt(u_timer_double* Tx, u_timeval_t tv, u16 set, u16 rst);
 
 
 /*************************************************
@@ -88,7 +75,7 @@ u32 s_odt(u_timer* Tx, u32 tv, u16 set, u16 rst);
 * ___|▔▔▔▔▔▔▔▔|_______      tv
 *
 **************************************************/
-u32 s_odts(u_timer* Tx, u32 tv, u16 set, u16 rst);
+u32 u_odts(u_timer_double* Tx, u_timeval_t tv, u16 set, u16 rst);
 
 
 /*************************************************
@@ -102,12 +89,12 @@ u32 s_odts(u_timer* Tx, u32 tv, u16 set, u16 rst);
 * _________|▔▔▔▔▔▔|______   tv
 *
 **************************************************/
-u32 s_offdt(u_timer* Tx, u32 tv, u16 set, u16 rst);
+u32 u_offdt(u_timer_double* Tx, u_timeval_t tv, u16 set, u16 rst);
 //------------------------------------------------------------
 
 
-int test_processing();
+int test_processing_v2();
+
 
 C_END
-
-#endif // __S5_TIMERS_H__
+#endif // __S5_TIMERu_H__

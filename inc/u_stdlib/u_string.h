@@ -3,7 +3,7 @@
 
 #include "u_stdlib.h"
 
-
+C_START
 
 //если не поддерживается деление
 // #define NO_DIVISION
@@ -41,5 +41,5 @@ STDLIB_API int u_isxdigit(char ch);
 STDLIB_API int u_isupper(char ch);
 STDLIB_API char u_tolower(char ch);
 STDLIB_API int u_isspace(char ch);
-
+C_END
 #endif // !STRING_H

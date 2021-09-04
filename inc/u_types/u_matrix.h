@@ -1,11 +1,12 @@
 #ifndef __U_MATRIX_H__
 #define __U_MATRIX_H__
 
-#include <stddef.h>
+#include <u_stdlib/u_stddef.h>
+// #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-
+C_START
 typedef struct
 {
     size_t lenght;
@@ -25,7 +26,7 @@ void u_matrix_free(u_matrix* m);
  * @param  j: столбец
  * @retval 
  */
-size_t* u_matrix_at(u_matrix* m, size_t i,size_t j);
+void* u_matrix_at(u_matrix* m, size_t i,size_t j);
 
 /**
  * @brief  
@@ -48,4 +49,7 @@ void u_matrix_push_line(u_matrix* m);
 void u_matrix_push_column(u_matrix** m);
 u_matrix* u_matrix_new_get_line(u_matrix* m,size_t line);
 u_matrix* u_matrix_new_get_column(u_matrix* m,size_t column);
+
+void matrix_test();
+C_END
 #endif // __U_MATRIX_H__

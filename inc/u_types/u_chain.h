@@ -1,7 +1,7 @@
 #ifndef U_CHAIN_H
 #define U_CHAIN_H
 #include <u_stdlib/u_stdlib.h>
-
+C_START
 //-------------
 struct Array{
     void* data;
@@ -48,4 +48,5 @@ struct chain* u_find_first(struct chain* ch);
  struct chain* u_copy(struct chain* ch);
  void u_rewrite_chain(struct chain* ch,void* data, size_t n);
 
+C_END
 #endif // !U_CHAIN_H

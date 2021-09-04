@@ -84,7 +84,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-
+C_START
 void u_free(void *__ptr);    
 void *u_malloc(size_t __size); 
 void *u_realloc(void *__ptr, size_t __size); 
@@ -98,5 +98,5 @@ char *u_strstr(const char *__haystack, const char *__needle);
 
 typedef void(*ufree_func)(void*);
 // #endif
-
+C_END
 #endif // !U_STDLIB_H

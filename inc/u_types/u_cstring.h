@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <u_stdlib/u_stdlib.h>
 
-
+C_START
 typedef struct u_string_t
 {
     char* str;
@@ -53,5 +53,5 @@ size_t str_to_char_array_a(u_string* str, char*** arr);
 
 //-- взять i-ю подстроку
 u_string* get_i_substring(u_string* str,size_t i);
-
+C_END
 #endif // __U_CSTRING_H__

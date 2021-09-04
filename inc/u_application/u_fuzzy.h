@@ -10,6 +10,8 @@
 #define U_MIN(x,y)    (((x)<(y))?(x):(y))
 #define U_MAX(x,y)    (((x)>(y))?(x):(y))
 
+C_START
+
 typedef 
 enum {
     OR,
@@ -66,5 +68,6 @@ void u_fuzzy_set_sigma(u_fuzzy* fuzzy, float sigma);
 
 void u_fuzzy_test(void);
 
+C_END
 
 #endif // __U_FUZZY_H__

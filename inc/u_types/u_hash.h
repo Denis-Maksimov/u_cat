@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 #ifndef c_new
 #define c_new(t)     ((t*)malloc(sizeof(t)))
 #endif
@@ -59,7 +58,6 @@ void freemem_v2(hash_table_v2 *tree, void(*data_free_f)(void*));
 hnode_v2* get_elem_by_key_v2(hash_table_v2* table,char* key);
 void* get_data_by_key_v2(hash_table_v2* tab,char* key);
 hash_table_v2* addnode_v2( hash_table_v2 *table, char* key, void* data);
-
 
 
 

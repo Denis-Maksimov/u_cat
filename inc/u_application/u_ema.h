@@ -3,7 +3,7 @@
 
 #include <u_types/u_vector.h>
 
-
+C_START
 typedef struct u_ema_t
 {
     // size_t flags;
@@ -58,4 +58,6 @@ u_ivr* u_new_IVR(u_vector_float* x);
 float u_median_IVR(u_ivr* ivr);
 float u_moda_IVR(u_ivr* ivr);
 void u_free_IVR(u_ivr* ivr);
+
+C_END
 #endif // __U_EMA_H__

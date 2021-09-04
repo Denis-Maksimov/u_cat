@@ -102,7 +102,7 @@ ug_arrow_set_value(UgArrow *self, double digit)
     UgArrowPrivate* priv=ug_arrow_get_instance_private(self);
     priv->value=digit;
     gtk_widget_queue_draw(GTK_WIDGET(self));
-    g_message("%f",priv->value);
+    // g_message("%f",priv->value);
 }
 
 

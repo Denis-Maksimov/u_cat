@@ -31,8 +31,9 @@ U_CAT_OBJ=\
 ./src/u_application/u_ema.o \
 ./src/u_application/u_fuzzy.o \
 ./src/u_application/u_dbg.o \
+./src/u_application/u_strtokens.o \
+./src/u_application/slre.o \
 ./src/u_math/u_math.o \
-./src/u_math/u_fmatrix.o \
 ./src/u_stdlib/u_mallocat.o \
 ./src/u_stdlib/u_string.o \
 ./src/u_stdlib/u_mallocat.o \
@@ -53,18 +54,17 @@ U_CATMM_OBJ=\
 ./src/u_network/u_proto/http.o  
 
 
-
 #===============================
 
 
-run: main.cpp $(CAT_LIB) libu_catmm.so
+run: main.cpp $(CAT_LIB)
 	$(CXX) $< -I./inc -L. -lu_cat -lu_catmm -Wl,-rpath,.
 
 
-lib: libu_cat.so
-libWin: libu_cat.dll
+lib: libu_cat.so libu_catmm.so
+libWin: libu_cat.dll libu_catmm.dll
 
-libu_cat.so: $(U_CAT_OBJ) 
+libu_cat.so: $(U_CAT_OBJ)  
 	$(CC) -shared -o$@ $^ -lm
 
 libu_cat.dll: $(U_CAT_OBJ)
@@ -75,7 +75,7 @@ libu_catmm.so: $(U_CATMM_OBJ) libu_cat.so
 	$(CXX) -shared -o$@ $^ -L. -lu_cat -Wl,-rpath,.
 
 libu_catmm.dll: $(U_CATMM_OBJ) libu_cat.dll
-	$(CXX) -shared -o$@ $^ -L. -lu_cat -Wl,-rpath,.
+	$(CXX) -shared -o$@ $(U_CATMM_OBJ) -L. -lu_cat -Wl,-rpath,. -lm -lwinmm -lws2_32 
 
 #--------------------------
 ./src/u_algorithm/u_sort.o:
@@ -87,6 +87,8 @@ libu_catmm.dll: $(U_CATMM_OBJ) libu_cat.dll
 ./src/u_application/u_ema.o:
 ./src/u_application/u_fuzzy.o:
 ./src/u_application/u_dbg.o:
+./src/u_application/u_strtokens.o:
+./src/u_application/slre.o:
 #--------------------------
 ./src/u_math/u_math.o:
 ./src/u_math/u_fixed.o:
@@ -109,10 +111,11 @@ libu_catmm.dll: $(U_CATMM_OBJ) libu_cat.dll
 #--------------------------
 ./src/u_network/u_network.o:
 ./src/u_network/u_servermm.o: 
+./src/u_network/u_proto/http.o:
 #--------------------------
 ./src/u_crypto/u_kuznechik.o:
 #--------------------------
 
 clean:
-	rm -f $(U_CAT_OBJ) $(MAIN_OBJ) ./a.out
+	rm -f $(U_CAT_OBJ) $(U_CATMM_OBJ) $(MAIN_OBJ) ./a.out
 

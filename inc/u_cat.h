@@ -26,7 +26,7 @@
 //-- математические модули --
 //---------------------------
 #include "u_math/u_math.h"
-
+#include "u_math/u_fmatrix.h"
 //--------------------------------
 //-- пока нахрен этот велосипед --
 //--------------------------------
@@ -48,12 +48,12 @@
 #include "u_types/u_vector.h"
 #include "u_types/u_cstring.h"
 #include "u_types/u_ring.h"
-
+#include "u_types/u_matrix.h"
 //--------------------
 //-- сетевые модули --
 //--------------------
 #include "u_network/u_network.h"
-#include "u_network/u_server.h"
+// #include "u_network/u_server.h"
 
 //-------------------------
 //-- модули криптографии --

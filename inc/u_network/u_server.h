@@ -6,13 +6,16 @@
 
 #define U_IP(a,b,c,d)  ((a&0xff)|((b&0xff)<<8)|((c&0xff)<<16)|((d&0xff)<<24))
 
-typedef struct u_server_t{
+typedef struct u_server_t
+{
     io_sockets io;
-    // void(*handler)(fsm*,io_sockets*);
+ 
     fsm* fsm_rd; //finitie state machine for read
     fsm* fsm_wr; //finitie state machine for write
+
     void(*wr)(fsm*,struct u_server_t*);
     void(*rd)(fsm*,struct u_server_t*);
+
     struct timeval timeout;
     
     union{

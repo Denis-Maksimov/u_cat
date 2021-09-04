@@ -24,7 +24,9 @@
 typedef  SOCKET u_socket_t;
 
 #define U_INVALID_SOCKET    INVALID_SOCKET
-
+#define SHUT_RDWR           SD_BOTH
+#define SHUT_RD             SD_RECEIVE
+#define SHUT_WR             SD_SEND
 
 #endif //OS_WINDOWS
 //-------------------LINUX-----------------------
@@ -51,7 +53,8 @@ typedef int u_socket_t;
 #include <stdlib.h>
 #include <time.h>
 #include <stdint.h>
-
+#include <u_stdlib/u_stddef.h>
+C_START
 typedef struct 
 {
     u_socket_t in;  //for reading
@@ -68,4 +71,6 @@ typedef  struct sockaddr_in u_sockaddr_in_t;
 typedef  struct sockaddr u_sockaddr_t;
 u_socket_t u_accept(u_socket_t socket,u_sockaddr_t* client_addr, int* size_client_addr);
 int u_getsockname(u_socket_t socket, u_sockaddr_t* addr, int* namelen);
+
+C_END
 #endif // !U_NETWORK_H

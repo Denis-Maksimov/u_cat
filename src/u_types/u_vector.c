@@ -44,9 +44,9 @@ u_vector_free(u_vector* vec,void(*free_func)(void*))
 
 void u_vector_push_back(u_vector* vec, void* el)
 {
-    if(!vec)return;
-    vec->n_elem++;
-    vec->mem=realloc(vec->mem, (sizeof(size_t))*vec->n_elem);
+    if(!vec){return;}
+    vec->n_elem=vec->n_elem+1;
+    vec->mem=realloc(vec->mem, (sizeof(void*))*(vec->n_elem));
     vec->mem[vec->n_elem-1]=el;
 
 }
@@ -68,6 +68,16 @@ void* u_vector_at(u_vector* vec,size_t at)
     if(!vec)return 0;
     if(at>=vec->n_elem) return 0;
     return vec->mem[at];
+}
+
+void 
+u_vector_replace(u_vector* vec,size_t at, void* new_data)
+{
+    if(!vec)
+        {return;}
+    if(at>=vec->n_elem)
+        {return;}
+    vec->mem[at]=new_data;
 }
 
 #define IS_EQUAL    0

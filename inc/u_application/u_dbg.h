@@ -8,6 +8,7 @@
 #define LOG_NAME "./logfile.txt"
 #define U_LOG(format, args...) u_log (LOG_NAME, format , ## args)
 
+
 /*********************************************
 @brief: вывод и запись логов и дампов
 @note: логи выводятся в следующем формате:
